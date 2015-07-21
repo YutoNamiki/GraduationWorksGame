@@ -17,3 +17,9 @@
 #ifndef GAME_GameProjectile_generated_h
 	#include "GameProjectile.h"
 #endif
+#ifndef GAME_TestMyoPawn_generated_h
+	#include "TestMyoPawn.h"
+#endif
+#ifndef GAME_TestWiiActor_generated_h
+	#include "TestWiiActor.h"
+#endif

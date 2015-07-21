@@ -1,12 +1,21 @@
-﻿2015/07/21 14:42:49 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
+﻿2015/07/21 20:24:05 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
-         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 Development "C:\Users\game\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
+         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 DebugGame "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
+         Compiling game modules for hot reload
          Parsing headers for GameEditor
          Reflection code generated for GameEditor
-         Target is up to date.
-     1>プロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
+         Performing 4 actions (4 in parallel)
+         [3/4] Link UE4Editor-MyoPlugin-8678-Win64-DebugGame.dll
+         Game.generated.cpp
+         TestWiiActor.cpp
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-8678-Win64-DebugGame.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-8678-Win64-DebugGame.exp を作成中
+         [4/4] Link UE4Editor-Game-Win64-DebugGame-8678.dll
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-8678.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-8678.exp を作成中
+         -------- End Detailed Actions Stats -----------------------------------------------------------
+         Total build time: 15.10 seconds
+     1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:18.37
+経過時間 00:00:15.27
