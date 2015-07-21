@@ -26,6 +26,14 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 		FNativeFunctionRegistrar::RegisterFunction(AGameProjectile::StaticClass(),"OnHit",(Native)&AGameProjectile::execOnHit);
 	}
 	IMPLEMENT_CLASS(AGameProjectile, 2635654683);
+	void ATestMyoPawn::StaticRegisterNativesATestMyoPawn()
+	{
+	}
+	IMPLEMENT_CLASS(ATestMyoPawn, 526002533);
+	void ATestWiiActor::StaticRegisterNativesATestWiiActor()
+	{
+	}
+	IMPLEMENT_CLASS(ATestWiiActor, 3643505075);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -42,6 +50,7 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_APawn();
 
 	GAME_API class UClass* Z_Construct_UClass_AGameCharacter_NoRegister();
 	GAME_API class UClass* Z_Construct_UClass_AGameCharacter();
@@ -52,6 +61,10 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	GAME_API class UFunction* Z_Construct_UFunction_AGameProjectile_OnHit();
 	GAME_API class UClass* Z_Construct_UClass_AGameProjectile_NoRegister();
 	GAME_API class UClass* Z_Construct_UClass_AGameProjectile();
+	GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn();
+	GAME_API class UClass* Z_Construct_UClass_ATestWiiActor_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_ATestWiiActor();
 	GAME_API class UPackage* Z_Construct_UPackage_Game();
 	UClass* Z_Construct_UClass_AGameCharacter_NoRegister()
 	{
@@ -267,6 +280,69 @@ PRAGMA_POP
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGameProjectile(Z_Construct_UClass_AGameProjectile, TEXT("AGameProjectile"));
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGameProjectile);
+	UClass* Z_Construct_UClass_ATestMyoPawn_NoRegister()
+	{
+		return ATestMyoPawn::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ATestMyoPawn()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_APawn();
+			Z_Construct_UPackage_Game();
+			OuterClass = ATestMyoPawn::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TestMyoPawn.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ATestMyoPawn(Z_Construct_UClass_ATestMyoPawn, TEXT("ATestMyoPawn"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ATestMyoPawn);
+	UClass* Z_Construct_UClass_ATestWiiActor_NoRegister()
+	{
+		return ATestWiiActor::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ATestWiiActor()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage_Game();
+			OuterClass = ATestWiiActor::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ATestWiiActor(Z_Construct_UClass_ATestWiiActor, TEXT("ATestWiiActor"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ATestWiiActor);
 	UPackage* Z_Construct_UPackage_Game()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -275,8 +351,8 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Game")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x2C738418;
-			Guid.B = 0x4283EE64;
+			Guid.A = 0x33AAD6DD;
+			Guid.B = 0xE9EA98D9;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
