@@ -53,6 +53,7 @@ Game/Saved/*
 
 # Compiled source files for the engine to use
 Game/Intermediate/*
+!Game/Intermediate/ProjectFiles/*
 
 # Plugins
 !Game/Plugins/*
