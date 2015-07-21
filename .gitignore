@@ -52,7 +52,7 @@ Game/Build/*
 Game/Saved/*
 
 # Plugins
-!Game/Plugins/*
+!Game/Plugins/**/*.lib
 
 # Cache files for the editor to use
 Game/DerivedDataCache/*
