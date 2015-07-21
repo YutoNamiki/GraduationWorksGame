@@ -1,4 +1,4 @@
-﻿2015/07/21 20:24:05 にビルドを開始しました。
+﻿2015/07/21 20:30:00 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
          "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 DebugGame "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
@@ -6,16 +6,16 @@
          Parsing headers for GameEditor
          Reflection code generated for GameEditor
          Performing 4 actions (4 in parallel)
-         [3/4] Link UE4Editor-MyoPlugin-8678-Win64-DebugGame.dll
+         [3/4] Link UE4Editor-MyoPlugin-2918-Win64-DebugGame.dll
          Game.generated.cpp
-         TestWiiActor.cpp
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-8678-Win64-DebugGame.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-8678-Win64-DebugGame.exp を作成中
-         [4/4] Link UE4Editor-Game-Win64-DebugGame-8678.dll
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-8678.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-8678.exp を作成中
+         TestMyoPawn.cpp
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-2918-Win64-DebugGame.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-2918-Win64-DebugGame.exp を作成中
+         [4/4] Link UE4Editor-Game-Win64-DebugGame-674.dll
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-674.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-674.exp を作成中
          -------- End Detailed Actions Stats -----------------------------------------------------------
-         Total build time: 15.10 seconds
+         Total build time: 15.93 seconds
      1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:15.27
+経過時間 00:00:16.34
