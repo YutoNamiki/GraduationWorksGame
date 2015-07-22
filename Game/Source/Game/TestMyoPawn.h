@@ -2,6 +2,9 @@
 
 #pragma once
 
+#include "MyoDelegate.h"
+#include "IMyoPlugin.h"
+
 #include "GameFramework/Pawn.h"
 #include "TestMyoPawn.generated.h"
 
@@ -37,7 +40,9 @@ public:
 	bool bMyoPoseDoubleTap;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
 	float accelXatFist;
-	
+	UFUNCTION(BlueprintCallable, Category = "Level")
+	void MyoVibrate();
+
 private:
 	FVector myoAccelerarion;
 

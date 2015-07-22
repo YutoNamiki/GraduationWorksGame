@@ -13,9 +13,25 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GAME_TestMyoPawn_generated_h
 
-#define Game_Source_Game_TestMyoPawn_h_11_RPC_WRAPPERS
-#define Game_Source_Game_TestMyoPawn_h_11_RPC_WRAPPERS_NO_PURE_DECLS
-#define Game_Source_Game_TestMyoPawn_h_11_INCLASS_NO_PURE_DECLS \
+#define Game_Source_Game_TestMyoPawn_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execMyoVibrate) \
+	{ \
+		P_FINISH; \
+		this->MyoVibrate(); \
+	}
+
+
+#define Game_Source_Game_TestMyoPawn_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execMyoVibrate) \
+	{ \
+		P_FINISH; \
+		this->MyoVibrate(); \
+	}
+
+
+#define Game_Source_Game_TestMyoPawn_h_14_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesATestMyoPawn(); \
 	friend GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn(); \
@@ -26,7 +42,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual UObject* _getUObject() const override { return const_cast<ATestMyoPawn*>(this); }
 
 
-#define Game_Source_Game_TestMyoPawn_h_11_INCLASS \
+#define Game_Source_Game_TestMyoPawn_h_14_INCLASS \
 	private: \
 	static void StaticRegisterNativesATestMyoPawn(); \
 	friend GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn(); \
@@ -37,7 +53,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual UObject* _getUObject() const override { return const_cast<ATestMyoPawn*>(this); }
 
 
-#define Game_Source_Game_TestMyoPawn_h_11_STANDARD_CONSTRUCTORS \
+#define Game_Source_Game_TestMyoPawn_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATestMyoPawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATestMyoPawn) \
@@ -49,7 +65,7 @@ private: \
 public:
 
 
-#define Game_Source_Game_TestMyoPawn_h_11_ENHANCED_CONSTRUCTORS \
+#define Game_Source_Game_TestMyoPawn_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private copy-constructor, should never be used */ \
 	NO_API ATestMyoPawn(const ATestMyoPawn& InCopy); \
@@ -59,23 +75,23 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATestMyoPawn); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATestMyoPawn)
 
 
-#define Game_Source_Game_TestMyoPawn_h_8_PROLOG
-#define Game_Source_Game_TestMyoPawn_h_11_GENERATED_BODY_LEGACY \
+#define Game_Source_Game_TestMyoPawn_h_11_PROLOG
+#define Game_Source_Game_TestMyoPawn_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Game_Source_Game_TestMyoPawn_h_11_RPC_WRAPPERS \
-	Game_Source_Game_TestMyoPawn_h_11_INCLASS \
-	Game_Source_Game_TestMyoPawn_h_11_STANDARD_CONSTRUCTORS \
+	Game_Source_Game_TestMyoPawn_h_14_RPC_WRAPPERS \
+	Game_Source_Game_TestMyoPawn_h_14_INCLASS \
+	Game_Source_Game_TestMyoPawn_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_POP
 
 
-#define Game_Source_Game_TestMyoPawn_h_11_GENERATED_BODY \
+#define Game_Source_Game_TestMyoPawn_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Game_Source_Game_TestMyoPawn_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
-	Game_Source_Game_TestMyoPawn_h_11_INCLASS_NO_PURE_DECLS \
-	Game_Source_Game_TestMyoPawn_h_11_ENHANCED_CONSTRUCTORS \
+	Game_Source_Game_TestMyoPawn_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Game_Source_Game_TestMyoPawn_h_14_INCLASS_NO_PURE_DECLS \
+	Game_Source_Game_TestMyoPawn_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_POP
 

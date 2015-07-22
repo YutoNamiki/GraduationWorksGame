@@ -162,3 +162,8 @@ void ATestMyoPawn::MyoOrientationRoll(float Value)
 {
 	myoOrientationRoll = Value;
 }
+
+void ATestMyoPawn::MyoVibrate()
+{
+	IMyoPlugin::Get().VibrateDevice(1, MYO_VIBRATION_SHORT);
+}
