@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	void ATestWiiActor::StaticRegisterNativesATestWiiActor()
 	{
 	}
-	IMPLEMENT_CLASS(ATestWiiActor, 3643505075);
+	IMPLEMENT_CLASS(ATestWiiActor, 1822582001);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -330,11 +330,22 @@ PRAGMA_POP
 				OuterClass->ClassFlags |= 0x20900080;
 
 
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_position = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("position"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(position, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
+				UProperty* NewProp_velocity = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("velocity"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(velocity, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
+				UProperty* NewProp_accel = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("accel"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(accel, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
+PRAGMA_POP
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TestWiiActor.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_position, TEXT("Category"), TEXT("FVector"));
+				MetaData->SetValue(NewProp_position, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_velocity, TEXT("Category"), TEXT("FVector"));
+				MetaData->SetValue(NewProp_velocity, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_accel, TEXT("Category"), TEXT("FVector"));
+				MetaData->SetValue(NewProp_accel, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
 #endif
 			}
 		}
@@ -351,7 +362,7 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Game")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x33AAD6DD;
+			Guid.A = 0xEF0A3DC2;
 			Guid.B = 0xE9EA98D9;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;

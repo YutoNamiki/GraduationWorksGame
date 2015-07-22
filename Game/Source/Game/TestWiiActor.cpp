@@ -12,13 +12,13 @@ FVector gAccel, gVelocity, gPosition;
 // Sets default values
 ATestWiiActor::ATestWiiActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	bConnected = false;
 	gAgeCount = 0;
 
-	moveSpeed = 75.0f;
+	moveSpeed = 400.0f;
 
 	gAccel = FVector(gAccel.ZeroVector);
 	gVelocity = FVector(gVelocity.ZeroVector);
@@ -33,7 +33,7 @@ ATestWiiActor::ATestWiiActor()
 void ATestWiiActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	int count = 0;
 	while (!bConnected)
 	{
@@ -50,9 +50,11 @@ void ATestWiiActor::BeginPlay()
 }
 
 // Called every frame
-void ATestWiiActor::Tick( float DeltaTime )
+void ATestWiiActor::Tick(float DeltaTime)
 {
-	Super::Tick( DeltaTime );
+	Super::Tick(DeltaTime);
+
+	accel = gAccel;
 
 	if (remote.Button.B())
 	{
@@ -61,16 +63,7 @@ void ATestWiiActor::Tick( float DeltaTime )
 	}
 
 	gVelocity.Y += -gAccel.X * DeltaTime;
-	/*if (gVelocity.Y > 0.01f)
-	gVelocity.Y = 10.0f;
-	else if (gVelocity.Y < -0.01f)
-	gVelocity.Y = -10.0f;*/
-
 	gVelocity.Z += -gAccel.Y * DeltaTime;
-	/*if (gVelocity.Z > 0.03f)
-	gVelocity.Z= 10.0f;
-	else if (gVelocity.Z < -0.03f)
-	gVelocity.Z = -10.0f;*/
 
 	gPosition += gVelocity * moveSpeed * DeltaTime;
 
@@ -82,6 +75,9 @@ void ATestWiiActor::Tick( float DeltaTime )
 		gPosition.Y = 0.0f;
 		gPosition.Z = 0.0f;
 	}
+
+	velocity = gVelocity;
+	position = gPosition;
 
 	SetActorLocation(gPosition);
 }
@@ -168,8 +164,8 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 
 			gAccel = FVector(accelX, accelY, accelZ);
 
-			UE_LOG(LogTemp, Warning, TEXT("加速度センサー  ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), remote.Acceleration.X, remote.Acceleration.Y, remote.Acceleration.Z);
-			UE_LOG(LogTemp, Warning, TEXT("加速度(値丸め後)：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), gAccel.X, gAccel.Y, gAccel.Z);
+			/*UE_LOG(LogTemp, Warning, TEXT("加速度センサー  ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), remote.Acceleration.X, remote.Acceleration.Y, remote.Acceleration.Z);
+			UE_LOG(LogTemp, Warning, TEXT("加速度(値丸め後)：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), gAccel.X, gAccel.Y, gAccel.Z);*/
 
 			gAccel.X -= remote.Acceleration.Orientation.X;
 			gAccel.Y -= remote.Acceleration.Orientation.Y;
@@ -179,7 +175,7 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 			gAccel.X += 0.1f;
 			gAccel.Y += 0.1f;
 
-			UE_LOG(LogTemp, Warning, TEXT("加速度(-重力)   ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), gAccel.X, gAccel.Y, gAccel.Z);
+			/*UE_LOG(LogTemp, Warning, TEXT("加速度(-重力)   ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), gAccel.X, gAccel.Y, gAccel.Z);
 			UE_LOG(LogTemp, Warning, TEXT(" "));
 			UE_LOG(LogTemp, Warning, TEXT("回転度センサー  ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), remote.Acceleration.Orientation.X, remote.Acceleration.Orientation.Y, remote.Acceleration.Orientation.Z);
 			UE_LOG(LogTemp, Warning, TEXT("回転          ：[Pitch]%+2.3f [Roll]%+2.3f\n"), remote.Acceleration.Orientation.Pitch, remote.Acceleration.Orientation.Roll);
@@ -187,7 +183,7 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 			UE_LOG(LogTemp, Warning, TEXT("速度　        ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), gVelocity.X, gVelocity.Y, gVelocity.Z);
 			UE_LOG(LogTemp, Warning, TEXT("座標　        ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), gPosition.X, gPosition.Y, gPosition.Z);
 			UE_LOG(LogTemp, Warning, TEXT("UpdateAge       :%d"), remote.Acceleration.Orientation.UpdateAge);
-			UE_LOG(LogTemp, Warning, TEXT(" "));
+			UE_LOG(LogTemp, Warning, TEXT(" "));*/
 
 		}
 	}

@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GAME_TestWiiActor_generated_h
 
-#define Game_Source_Game_TestWiiActor_h_16_RPC_WRAPPERS
-#define Game_Source_Game_TestWiiActor_h_16_RPC_WRAPPERS_NO_PURE_DECLS
-#define Game_Source_Game_TestWiiActor_h_16_INCLASS_NO_PURE_DECLS \
+#define Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS
+#define Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define Game_Source_Game_TestWiiActor_h_15_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesATestWiiActor(); \
 	friend GAME_API class UClass* Z_Construct_UClass_ATestWiiActor(); \
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual UObject* _getUObject() const override { return const_cast<ATestWiiActor*>(this); }
 
 
-#define Game_Source_Game_TestWiiActor_h_16_INCLASS \
+#define Game_Source_Game_TestWiiActor_h_15_INCLASS \
 	private: \
 	static void StaticRegisterNativesATestWiiActor(); \
 	friend GAME_API class UClass* Z_Construct_UClass_ATestWiiActor(); \
@@ -37,7 +37,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual UObject* _getUObject() const override { return const_cast<ATestWiiActor*>(this); }
 
 
-#define Game_Source_Game_TestWiiActor_h_16_STANDARD_CONSTRUCTORS \
+#define Game_Source_Game_TestWiiActor_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATestWiiActor(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATestWiiActor) \
@@ -49,7 +49,7 @@ private: \
 public:
 
 
-#define Game_Source_Game_TestWiiActor_h_16_ENHANCED_CONSTRUCTORS \
+#define Game_Source_Game_TestWiiActor_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private copy-constructor, should never be used */ \
 	NO_API ATestWiiActor(const ATestWiiActor& InCopy); \
@@ -59,23 +59,23 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATestWiiActor); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATestWiiActor)
 
 
-#define Game_Source_Game_TestWiiActor_h_13_PROLOG
-#define Game_Source_Game_TestWiiActor_h_16_GENERATED_BODY_LEGACY \
+#define Game_Source_Game_TestWiiActor_h_12_PROLOG
+#define Game_Source_Game_TestWiiActor_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Game_Source_Game_TestWiiActor_h_16_RPC_WRAPPERS \
-	Game_Source_Game_TestWiiActor_h_16_INCLASS \
-	Game_Source_Game_TestWiiActor_h_16_STANDARD_CONSTRUCTORS \
+	Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS \
+	Game_Source_Game_TestWiiActor_h_15_INCLASS \
+	Game_Source_Game_TestWiiActor_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_POP
 
 
-#define Game_Source_Game_TestWiiActor_h_16_GENERATED_BODY \
+#define Game_Source_Game_TestWiiActor_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Game_Source_Game_TestWiiActor_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	Game_Source_Game_TestWiiActor_h_16_INCLASS_NO_PURE_DECLS \
-	Game_Source_Game_TestWiiActor_h_16_ENHANCED_CONSTRUCTORS \
+	Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	Game_Source_Game_TestWiiActor_h_15_INCLASS_NO_PURE_DECLS \
+	Game_Source_Game_TestWiiActor_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_POP
 
