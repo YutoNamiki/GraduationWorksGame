@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿2015/07/22 9:29:10 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
@@ -52,3 +53,25 @@
 ビルドに成功しました。
 
 経過時間 00:02:14.98
+=======
+﻿2015/07/22 15:23:15 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
+     1>Build:
+         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" Game Win64 Development "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
+         Parsing headers for Game
+         Reflection code generated for Game
+         Performing 2 actions (4 in parallel)
+         TestWiiActor.cpp
+         [2/2] Link Game.exe
+         WiiYourself!_v2_0.lib(wiimote.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.exp を作成中
+         コード生成しています。
+         コード生成が終了しました。
+         -------- End Detailed Actions Stats -----------------------------------------------------------
+         Total build time: 24.71 seconds
+     1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:24.86
+>>>>>>> 【Wii and Myo Setting】

@@ -2,6 +2,11 @@
 
 #pragma once
 
+#include "AllowWindowsPlatformTypes.h"
+#include "wiimote.h"
+#include "HideWindowsPlatformTypes.h"
+
+
 #include "GameFramework/Actor.h"
 #include "TestWiiActor.generated.h"
 
@@ -20,6 +25,8 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
-	
+private:
+	wiimote remote;
+	float moveSpeed;
 	
 };
