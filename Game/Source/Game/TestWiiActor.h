@@ -27,11 +27,11 @@ public:
 	wiimote remote;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FVector)
-		FVector accel;
+	FVector accel;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FVector)
-		FVector velocity;
+	FVector velocity;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FVector)
-		FVector position;
+	FVector position;
 
 	float moveSpeed;
 };

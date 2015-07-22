@@ -51,7 +51,6 @@ void ATestMyoPawn::Tick( float DeltaTime )
 	{
 		if (abs(myoAccelerarion.X - accelXatFist) > 0.5f)
 		{
-			bCanPullString = false;
 			bCanShootArrow = true;
 		}
 	}
@@ -63,12 +62,11 @@ void ATestMyoPawn::Tick( float DeltaTime )
 		UE_LOG(LogTemp, Warning, TEXT("shoot arrow!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"));
 	}
 
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Acceleration [X]    :%f [Y]  :%f [Z]   :%f"), myoAccelerarion.X, myoAccelerarion.Y, myoAccelerarion.Z);
-		UE_LOG(LogTemp, Warning, TEXT("Orientation  [Pitch]:%f [Yaw]:%f [Roll]:%f"), myoOrientationPitch, myoOrientationYaw, myoOrientationRoll);
-		UE_LOG(LogTemp, Warning, TEXT("accelXatFist:%f bCanShoot:%d"), accelXatFist, bCanShootArrow);
-		UE_LOG(LogTemp, Warning, TEXT("Pose [Rest]:%d [Fist]:%d [Spred]:%d [Tap]:%d"), bMyoPoseRest, bMyoPoseFist, bMyoPoseFingersSpread, bMyoPoseDoubleTap);
-	}
+	/*UE_LOG(LogTemp, Warning, TEXT("Acceleration [X]    :%f [Y]  :%f [Z]   :%f"), myoAccelerarion.X, myoAccelerarion.Y, myoAccelerarion.Z);
+	UE_LOG(LogTemp, Warning, TEXT("Orientation  [Pitch]:%f [Yaw]:%f [Roll]:%f"), myoOrientationPitch, myoOrientationYaw, myoOrientationRoll);
+	UE_LOG(LogTemp, Warning, TEXT("accelXatFist:%f bCanShoot:%d"), accelXatFist, bCanShootArrow);
+	UE_LOG(LogTemp, Warning, TEXT("Pose [Rest]:%d [Fist]:%d [Spred]:%d [Tap]:%d"), bMyoPoseRest, bMyoPoseFist, bMyoPoseFingersSpread, bMyoPoseDoubleTap);*/
+	
 }
 
 // Called to bind functionality to input

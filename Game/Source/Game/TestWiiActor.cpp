@@ -72,6 +72,7 @@ void ATestWiiActor::Tick(float DeltaTime)
 		gAccel = FVector(gAccel.ZeroVector);
 		gVelocity = FVector(gVelocity.ZeroVector);
 		gPosition = FVector(gPosition.ZeroVector);
+		SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
 		gPosition.Y = 0.0f;
 		gPosition.Z = 0.0f;
 	}
@@ -79,7 +80,7 @@ void ATestWiiActor::Tick(float DeltaTime)
 	velocity = gVelocity;
 	position = gPosition;
 
-	SetActorLocation(gPosition);
+	//SetActorLocation(gPosition);
 }
 
 void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_state& new_state)
