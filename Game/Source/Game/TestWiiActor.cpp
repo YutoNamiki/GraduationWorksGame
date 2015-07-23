@@ -58,29 +58,48 @@ void ATestWiiActor::Tick(float DeltaTime)
 
 	if (remote.Button.B())
 	{
+		bPushAbutton = false;
+		bPushBbutton = true;
 		gAccel = FVector(gAccel.ZeroVector);
 		gVelocity = FVector(gVelocity.ZeroVector);
+	}
+	else if (remote.Button.A())
+	{
+		bPushAbutton = true;
+		bPushBbutton = false;
+	}
+	else
+	{
+		bPushAbutton = false;
+		bPushBbutton = false;
+	}
+
+	if (remote.Button.Up())
+		bPushUpButton = true;
+	else if (remote.Button.Down())
+		bPushDownButton = true;
+	else
+	{
+		bPushUpButton = false;
+		bPushDownButton = false;
+	}
+	if (remote.Button.Right())
+		bPushRightButton = true;
+	else if (remote.Button.Left())
+		bPushLeftButton = true;
+	else
+	{
+		bPushRightButton = false;
+		bPushLeftButton = false;
 	}
 
 	gVelocity.Y += -gAccel.X * DeltaTime;
 	gVelocity.Z += -gAccel.Y * DeltaTime;
 
 	gPosition += gVelocity * moveSpeed * DeltaTime;
-
-	if (remote.Button.A())
-	{
-		gAccel = FVector(gAccel.ZeroVector);
-		gVelocity = FVector(gVelocity.ZeroVector);
-		gPosition = FVector(gPosition.ZeroVector);
-		SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
-		gPosition.Y = 0.0f;
-		gPosition.Z = 0.0f;
-	}
-
+	
 	velocity = gVelocity;
 	position = gPosition;
-
-	//SetActorLocation(gPosition);
 }
 
 void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_state& new_state)
@@ -187,5 +206,34 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 			UE_LOG(LogTemp, Warning, TEXT(" "));*/
 
 		}
+	}
+}
+
+void ATestWiiActor::PushArrowButton()
+{
+	if (bPushUpButton)
+	{
+		velocity.Z = 0.1f;
+	}
+	else if (bPushDownButton)
+	{
+		velocity.Z = -0.1f;
+	}
+	else
+	{
+		velocity.Z = 0.0f;
+	}
+
+	if (bPushRightButton)
+	{
+		velocity.Y = 0.1f;
+	}
+	else if (bPushLeftButton)
+	{
+		velocity.Y = -0.1f;
+	}
+	else
+	{
+		velocity.Y = 0.0f;
 	}
 }

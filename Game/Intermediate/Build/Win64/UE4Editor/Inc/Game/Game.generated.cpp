@@ -33,8 +33,9 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	IMPLEMENT_CLASS(ATestMyoPawn, 4084324838);
 	void ATestWiiActor::StaticRegisterNativesATestWiiActor()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(ATestWiiActor::StaticClass(),"PushArrowButton",(Native)&ATestWiiActor::execPushArrowButton);
 	}
-	IMPLEMENT_CLASS(ATestWiiActor, 1822582001);
+	IMPLEMENT_CLASS(ATestWiiActor, 3144359389);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -65,6 +66,7 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	GAME_API class UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoVibrate();
 	GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn_NoRegister();
 	GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn();
+	GAME_API class UFunction* Z_Construct_UFunction_ATestWiiActor_PushArrowButton();
 	GAME_API class UClass* Z_Construct_UClass_ATestWiiActor_NoRegister();
 	GAME_API class UClass* Z_Construct_UClass_ATestWiiActor();
 	GAME_API class UPackage* Z_Construct_UPackage_Game();
@@ -362,6 +364,23 @@ PRAGMA_POP
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ATestMyoPawn(Z_Construct_UClass_ATestMyoPawn, TEXT("ATestMyoPawn"));
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATestMyoPawn);
+	UFunction* Z_Construct_UFunction_ATestWiiActor_PushArrowButton()
+	{
+		UObject* Outer=Z_Construct_UClass_ATestWiiActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("PushArrowButton"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Level"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ATestWiiActor_NoRegister()
 	{
 		return ATestWiiActor::StaticClass();
@@ -379,17 +398,43 @@ PRAGMA_POP
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_ATestWiiActor_PushArrowButton());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushLeftButton, ATestWiiActor, bool);
+				UProperty* NewProp_bPushLeftButton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushLeftButton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushLeftButton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushLeftButton, ATestWiiActor), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushRightButton, ATestWiiActor, bool);
+				UProperty* NewProp_bPushRightButton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushRightButton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushRightButton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushRightButton, ATestWiiActor), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushDownButton, ATestWiiActor, bool);
+				UProperty* NewProp_bPushDownButton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushDownButton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushDownButton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushDownButton, ATestWiiActor), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushUpButton, ATestWiiActor, bool);
+				UProperty* NewProp_bPushUpButton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushUpButton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushUpButton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushUpButton, ATestWiiActor), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushBbutton, ATestWiiActor, bool);
+				UProperty* NewProp_bPushBbutton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushBbutton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushBbutton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushBbutton, ATestWiiActor), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushAbutton, ATestWiiActor, bool);
+				UProperty* NewProp_bPushAbutton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushAbutton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushAbutton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushAbutton, ATestWiiActor), sizeof(bool), true);
 				UProperty* NewProp_position = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("position"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(position, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
 				UProperty* NewProp_velocity = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("velocity"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(velocity, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
 				UProperty* NewProp_accel = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("accel"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(accel, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
 PRAGMA_POP
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ATestWiiActor_PushArrowButton()); // 3339428358
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TestWiiActor.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_bPushLeftButton, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushLeftButton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_bPushRightButton, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushRightButton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_bPushDownButton, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushDownButton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_bPushUpButton, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushUpButton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_bPushBbutton, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushBbutton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_bPushAbutton, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushAbutton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
 				MetaData->SetValue(NewProp_position, TEXT("Category"), TEXT("FVector"));
 				MetaData->SetValue(NewProp_position, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
 				MetaData->SetValue(NewProp_velocity, TEXT("Category"), TEXT("FVector"));
@@ -412,8 +457,8 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Game")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x7EBD2E1F;
-			Guid.B = 0x092CF8BB;
+			Guid.A = 0xF72655E2;
+			Guid.B = 0x46424566;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

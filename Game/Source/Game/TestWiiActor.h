@@ -24,14 +24,28 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaSeconds) override;
 
-	wiimote remote;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FVector)
 	FVector accel;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FVector)
 	FVector velocity;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FVector)
 	FVector position;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushAbutton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushBbutton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushUpButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushDownButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushRightButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushLeftButton;
+	UFUNCTION(BlueprintCallable, Category = "Level")
+	void PushArrowButton();
 
+private:
+	wiimote remote;
 	float moveSpeed;
 };
