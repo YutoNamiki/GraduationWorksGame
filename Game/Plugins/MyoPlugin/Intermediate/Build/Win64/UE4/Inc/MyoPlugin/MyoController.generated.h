@@ -14,7 +14,7 @@ struct FRotator;
 #endif
 #define MYOPLUGIN_MyoController_generated_h
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSetStreamEmg) \
 	{ \
@@ -63,7 +63,7 @@ struct FRotator;
 	}
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSetStreamEmg) \
 	{ \
@@ -112,7 +112,7 @@ struct FRotator;
 	}
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS_NO_PURE_DECLS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUMyoController(); \
 	friend MYOPLUGIN_API class UClass* Z_Construct_UClass_UMyoController(); \
@@ -123,7 +123,7 @@ struct FRotator;
 	virtual UObject* _getUObject() const { return const_cast<UMyoController*>(this); }
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS \
 	private: \
 	static void StaticRegisterNativesUMyoController(); \
 	friend MYOPLUGIN_API class UClass* Z_Construct_UClass_UMyoController(); \
@@ -134,7 +134,7 @@ struct FRotator;
 	virtual UObject* _getUObject() const { return const_cast<UMyoController*>(this); }
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_STANDARD_CONSTRUCTORS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMyoController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMyoController) \
@@ -146,7 +146,7 @@ private: \
 public:
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_ENHANCED_CONSTRUCTORS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMyoController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -158,29 +158,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMyoController); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMyoController)
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_6_PROLOG
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_GENERATED_BODY_LEGACY \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_6_PROLOG
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_STANDARD_CONSTRUCTORS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_POP
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_GENERATED_BODY \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS_NO_PURE_DECLS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_ENHANCED_CONSTRUCTORS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_INCLASS_NO_PURE_DECLS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h_10_ENHANCED_CONSTRUCTORS \
 static_assert(false, "Unknown access specifier for GENERATED_BODY() macro in class MyoController."); \
 PRAGMA_POP
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h
+#define CURRENT_FILE_ID Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoController_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

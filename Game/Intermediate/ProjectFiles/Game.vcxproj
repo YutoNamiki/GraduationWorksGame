@@ -324,9 +324,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'">
-    <IncludePath />
+    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
     <ReferencePath />
-    <LibraryPath />
+    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -341,9 +341,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
-    <IncludePath />
+    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
     <ReferencePath />
-    <LibraryPath />
+    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -386,9 +386,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'">
-    <IncludePath />
+    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
     <ReferencePath />
-    <LibraryPath />
+    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -403,9 +403,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
-    <IncludePath />
+    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
     <ReferencePath />
-    <LibraryPath />
+    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -437,9 +437,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'">
-    <IncludePath />
+    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
     <ReferencePath />
-    <LibraryPath />
+    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
