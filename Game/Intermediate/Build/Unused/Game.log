@@ -1,21 +1,54 @@
-﻿2015/07/21 20:30:00 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
+﻿2015/07/22 9:29:10 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
-         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 DebugGame "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
-         Compiling game modules for hot reload
+         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 Development "C:\Users\game\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
          Parsing headers for GameEditor
          Reflection code generated for GameEditor
-         Performing 4 actions (4 in parallel)
-         [3/4] Link UE4Editor-MyoPlugin-2918-Win64-DebugGame.dll
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-2059.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-2059.pdb".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-6343.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-6343.pdb".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-1482.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-1482.pdb".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-1909.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-1909.pdb".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-4746.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-4746.pdb".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-674.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-674.pdb".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-8678.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-8678.pdb".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-8849.dll".
+         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-Win64-DebugGame-8849.pdb".
+         Performing 22 actions (4 in parallel)
+         PCH.MyoPluginPrivatePCH.h.cpp
+         PCH.Game.h.cpp
+         GameHUD.cpp
          Game.generated.cpp
+         GameCharacter.cpp
+         GameGameMode.cpp
+         GameProjectile.cpp
          TestMyoPawn.cpp
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-2918-Win64-DebugGame.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-MyoPlugin-2918-Win64-DebugGame.exp を作成中
-         [4/4] Link UE4Editor-Game-Win64-DebugGame-674.dll
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-674.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\DebugGame\UE4Editor-Game-Win64-DebugGame-674.exp を作成中
+         TestWiiActor.cpp
+         Game.cpp
+         FMyoPlugin.cpp
+         MyoHubWorker.cpp
+         MyoPlugin.generated.cpp
+         MyoPlayerController.cpp
+         MyoPluginActor.cpp
+         MyoComponent.cpp
+         MyoDelegateBlueprint.cpp
+         MyoInterface.cpp
+         MyoController.cpp
+         MyoDelegate.cpp
+         [21/22] Link UE4Editor-MyoPlugin.dll
+            ライブラリ C:\Users\game\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin.lib とオブジェクト C:\Users\game\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin.exp を作成中
+         [22/22] Link UE4Editor-Game.dll
+            ライブラリ C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game.lib とオブジェクト C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game.exp を作成中
          -------- End Detailed Actions Stats -----------------------------------------------------------
-         Total build time: 15.93 seconds
-     1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
+         Total build time: 130.46 seconds
+     1>プロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:16.34
+経過時間 00:02:14.98
