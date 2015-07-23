@@ -17,9 +17,9 @@ struct FMyoEmgData;
 #endif
 #define MYOPLUGIN_MyoInterface_generated_h
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS_NO_PURE_DECLS
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_EVENT_PARMS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS_NO_PURE_DECLS
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_EVENT_PARMS \
 	struct MyoInterface_eventOnAccelerometerData_Parms \
 	{ \
 		UMyoController* myo; \
@@ -94,8 +94,8 @@ extern MYOPLUGIN_API  FName MYOPLUGIN_OnOrientationData;
 extern MYOPLUGIN_API  FName MYOPLUGIN_OnPair;
 extern MYOPLUGIN_API  FName MYOPLUGIN_OnPose;
 extern MYOPLUGIN_API  FName MYOPLUGIN_OnUnpair;
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_CALLBACK_WRAPPERS
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_STANDARD_CONSTRUCTORS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_CALLBACK_WRAPPERS
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	MYOPLUGIN_API UMyoInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMyoInterface) \
@@ -107,7 +107,7 @@ private: \
 public:
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_ENHANCED_CONSTRUCTORS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	MYOPLUGIN_API UMyoInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -130,22 +130,22 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_GENERATED_BODY_LEGACY \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_GENERATED_BODY_LEGACY \
 		PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 	GENERATED_UINTERFACE_BODY_COMMON() \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_STANDARD_CONSTRUCTORS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_STANDARD_CONSTRUCTORS \
 	PRAGMA_POP
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_GENERATED_BODY \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 	GENERATED_UINTERFACE_BODY_COMMON() \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_ENHANCED_CONSTRUCTORS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_POP
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE_NO_PURE_DECLS \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~IMyoInterface() {} \
 public: \
@@ -166,7 +166,7 @@ public: \
 	virtual UObject* _getUObject() const = 0;
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE \
 protected: \
 	virtual ~IMyoInterface() {} \
 public: \
@@ -187,32 +187,32 @@ public: \
 	virtual UObject* _getUObject() const = 0;
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_6_PROLOG \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_EVENT_PARMS
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_6_PROLOG \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_EVENT_PARMS
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_14_GENERATED_BODY_LEGACY \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_CALLBACK_WRAPPERS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_CALLBACK_WRAPPERS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE \
 public: \
 PRAGMA_POP
 
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_14_GENERATED_BODY \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_CALLBACK_WRAPPERS \
-	YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE_NO_PURE_DECLS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_CALLBACK_WRAPPERS \
+	Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h_9_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_POP
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h
+#define CURRENT_FILE_ID Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoInterface_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -2,6 +2,9 @@
 
 #pragma once
 
+#include "MyoDelegate.h"
+#include "IMyoPlugin.h"
+
 #include "GameFramework/Pawn.h"
 #include "TestMyoPawn.generated.h"
 
@@ -23,16 +26,29 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bCanShootArrow;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bCanPullString;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bMyoPoseRest;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bMyoPoseFist;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bMyoPoseFingersSpread;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bMyoPoseDoubleTap;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
+	float accelXatFist;
+	UFUNCTION(BlueprintCallable, Category = "Level")
+	void MyoVibrate();
+
 private:
 	FVector myoAccelerarion;
+
 	float myoOrientationPitch;
 	float myoOrientationYaw;
 	float myoOrientationRoll;
-
-	bool bMyoPoseRest;
-	bool bMyoPoseFist;
-	bool bMyoPoseFingersSpread;
-	bool bMyoPoseDoubleTap;
 
 	void MyoAccelerationX(float Value);
 	void MyoAccelerationY(float Value);
@@ -51,10 +67,4 @@ private:
 	void MyoPoseFistOff();
 	void MyoPoseFingersSpreadOff();
 	void MyoPoseDoubleTapOff();
-
-	float accelXatFist;
-
-	bool bCanPullString;
-	bool bCanShootArrow;
-	
 };

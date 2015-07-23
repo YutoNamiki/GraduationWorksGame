@@ -13,13 +13,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MYOPLUGIN_MyoDelegate_generated_h
 
-#define YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoDelegate_h_68_GENERATED_BODY \
+#define Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoDelegate_h_68_GENERATED_BODY \
 	friend MYOPLUGIN_API class UScriptStruct* Z_Construct_UScriptStruct_FMyoEmgData(); \
 	MYOPLUGIN_API static class UScriptStruct* StaticStruct();
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID YOICHI_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoDelegate_h
+#define CURRENT_FILE_ID Game_Plugins_MyoPlugin_Source_MyoPlugin_Public_MyoDelegate_h
 
 
 #define FOREACH_ENUM_MYOSTREAMEMGTYPE(op) \
