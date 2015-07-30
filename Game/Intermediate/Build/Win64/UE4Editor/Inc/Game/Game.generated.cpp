@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	{
 		FNativeFunctionRegistrar::RegisterFunction(ATestWiiActor::StaticClass(),"PushArrowButton",(Native)&ATestWiiActor::execPushArrowButton);
 	}
-	IMPLEMENT_CLASS(ATestWiiActor, 3144359389);
+	IMPLEMENT_CLASS(ATestWiiActor, 215410156);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
@@ -413,6 +413,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_bPushBbutton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushBbutton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushBbutton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushBbutton, ATestWiiActor), sizeof(bool), true);
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushAbutton, ATestWiiActor, bool);
 				UProperty* NewProp_bPushAbutton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushAbutton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushAbutton, ATestWiiActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushAbutton, ATestWiiActor), sizeof(bool), true);
+				UProperty* NewProp_motionPlusRoll = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("motionPlusRoll"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(motionPlusRoll, ATestWiiActor), 0x0000000000000005);
+				UProperty* NewProp_motionPlusPitch = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("motionPlusPitch"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(motionPlusPitch, ATestWiiActor), 0x0000000000000005);
+				UProperty* NewProp_motionPlusYaw = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("motionPlusYaw"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(motionPlusYaw, ATestWiiActor), 0x0000000000000005);
 				UProperty* NewProp_position = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("position"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(position, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
 				UProperty* NewProp_velocity = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("velocity"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(velocity, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
 				UProperty* NewProp_accel = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("accel"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(accel, ATestWiiActor), 0x0000000000000005, Z_Construct_UScriptStruct_FVector());
@@ -435,6 +438,12 @@ PRAGMA_POP
 				MetaData->SetValue(NewProp_bPushBbutton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
 				MetaData->SetValue(NewProp_bPushAbutton, TEXT("Category"), TEXT("bool"));
 				MetaData->SetValue(NewProp_bPushAbutton, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_motionPlusRoll, TEXT("Category"), TEXT("float"));
+				MetaData->SetValue(NewProp_motionPlusRoll, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_motionPlusPitch, TEXT("Category"), TEXT("float"));
+				MetaData->SetValue(NewProp_motionPlusPitch, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
+				MetaData->SetValue(NewProp_motionPlusYaw, TEXT("Category"), TEXT("float"));
+				MetaData->SetValue(NewProp_motionPlusYaw, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
 				MetaData->SetValue(NewProp_position, TEXT("Category"), TEXT("FVector"));
 				MetaData->SetValue(NewProp_position, TEXT("ModuleRelativePath"), TEXT("TestWiiActor.h"));
 				MetaData->SetValue(NewProp_velocity, TEXT("Category"), TEXT("FVector"));
@@ -457,7 +466,7 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Game")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0xF72655E2;
+			Guid.A = 0x31BCAD0B;
 			Guid.B = 0x46424566;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;

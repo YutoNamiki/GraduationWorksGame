@@ -8,7 +8,9 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 bool bConnected;
 int gAgeCount;
 FVector gAccel, gVelocity, gPosition;
-
+float g_speed_yaw = 0.0f;
+float g_speed_pitch = 0.0f;
+float g_speed_roll = 0.0f;
 // Sets default values
 ATestWiiActor::ATestWiiActor()
 {
@@ -25,7 +27,7 @@ ATestWiiActor::ATestWiiActor()
 	gPosition = FVector(gPosition.ZeroVector);
 
 	remote.ChangedCallback = on_state_change;
-	remote.CallbackTriggerFlags = (state_change_flags)(CONNECTED | ACCEL_CHANGED);
+	remote.CallbackTriggerFlags = (state_change_flags)(CONNECTED | CHANGED_ALL);
 
 }
 
@@ -55,7 +57,11 @@ void ATestWiiActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	accel = gAccel;
+	motionPlusYaw = g_speed_yaw;
+	motionPlusPitch = g_speed_pitch;
+	motionPlusRoll = g_speed_roll;
 
+	UE_LOG(LogTemp, Warning, TEXT("座標　        ：[pitch] %+2.3f [roll] %+2.3f [yaw] %+2.3f\n"), motionPlusPitch, motionPlusRoll, motionPlusYaw);
 	if (remote.Button.B())
 	{
 		bPushAbutton = false;
@@ -117,40 +123,38 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 	}
 
 	// モーションプラスの検出したら
-	if (changed & MOTIONPLUS_DETECTED)
+	if (changed & MOTIONPLUS_DETECTED) 
 	{
-		UE_LOG(LogTemp, Warning, TEXT("モーションプラスを検出"));
-		if (remote.ExtensionType == wiimote_state::NONE)
+		bool res = remote.EnableMotionPlus();
+		while (!res)
 		{
-			remote.EnableMotionPlus();
-			UE_LOG(LogTemp, Warning, TEXT("モーションプラスを有効"));
+			if (remote.ExtensionType == wiimote_state::NONE)
+			{
+				res = remote.EnableMotionPlus();
+			}
 		}
+		// 拡張コネクタにモーションプラスが接続されてたら
 	}
-	// 拡張コネクタにモーションプラスが接続されてたら
-	else if (changed & MOTIONPLUS_EXTENSION_CONNECTED)
+	else if (changed & MOTIONPLUS_EXTENSION_CONNECTED) 
 	{
-		UE_LOG(LogTemp, Warning, TEXT("拡張コネクタにモーションプラスを検出"));
 		if (remote.MotionPlusEnabled())
-		{
 			remote.EnableMotionPlus();
-			UE_LOG(LogTemp, Warning, TEXT("モーションプラスを有効"));
-		}
+		// モーションプラスが拡張コネクタから切断されたら
 	}
-	// モーションプラスが拡張コネクタから切断されたら
-	else if (changed & MOTIONPLUS_EXTENSION_DISCONNECTED)
+	else if (changed & MOTIONPLUS_EXTENSION_DISCONNECTED) 
 	{
 		// 再びモーションプラスのデータを有効にする
 		if (remote.MotionPlusConnected())
 			remote.EnableMotionPlus();
+		// その他の拡張機器が接続されたら
 	}
-	// その他の拡張機器が接続されたら
-	else if (changed & EXTENSION_CONNECTED)
+	else if (changed & EXTENSION_CONNECTED) 
 	{
 		if (!remote.IsBalanceBoard())
 			remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_EXT);
+		// その他の拡張機器が切断されたら
 	}
-	// その他の拡張機器が切断されたら
-	else if (changed & EXTENSION_DISCONNECTED)
+	else if (changed & EXTENSION_DISCONNECTED) 
 	{
 		remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR);
 	}
@@ -160,6 +164,14 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 	{
 		// リフレッシュ
 		remote.RefreshState();
+
+		// モーションプラスの状態変化が起こったら
+		if (changed & MOTIONPLUS_SPEED_CHANGED) {
+			g_speed_yaw = remote.MotionPlus.Speed.Yaw;
+			g_speed_pitch = remote.MotionPlus.Speed.Pitch;
+			g_speed_roll = remote.MotionPlus.Speed.Roll;
+			/*UE_LOG(LogTemp, Warning, TEXT("座標　        ：[pitch] %+2.3f [roll] %+2.3f [yaw] %+2.3f\n"), g_speed_pitch, g_speed_roll, g_speed_yaw);*/
+		}
 
 		// モーションプラスの状態変化が起こったら
 		if (changed & ACCEL_CHANGED)
@@ -204,7 +216,7 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 			UE_LOG(LogTemp, Warning, TEXT("座標　        ：[X] %+2.3f [Y] %+2.3f [Z] %+2.3f\n"), gPosition.X, gPosition.Y, gPosition.Z);
 			UE_LOG(LogTemp, Warning, TEXT("UpdateAge       :%d"), remote.Acceleration.Orientation.UpdateAge);
 			UE_LOG(LogTemp, Warning, TEXT(" "));*/
-
+			
 		}
 	}
 }

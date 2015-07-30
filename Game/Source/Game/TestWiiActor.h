@@ -30,6 +30,12 @@ public:
 	FVector velocity;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FVector)
 	FVector position;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
+	float motionPlusYaw;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
+	float motionPlusPitch;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
+	float motionPlusRoll;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
 	bool bPushAbutton;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
