@@ -1,21 +1,40 @@
-﻿2015/07/23 12:31:07 にビルドを開始しました。
+﻿2015/07/30 13:26:38 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
          "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" Game Win64 Development "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
          Parsing headers for Game
          Reflection code generated for Game
-         Performing 3 actions (4 in parallel)
-         TestWiiActor.cpp
+         Performing 22 actions (4 in parallel)
+         PCH.Game.h.cpp
+         PCH.MyoPluginPrivatePCH.h.cpp
+         GameHUD.cpp
          Game.generated.cpp
-         [3/3] Link Game.exe
+         GameCharacter.cpp
+         GameGameMode.cpp
+         TestWiiActor.cpp
+         TestMyoPawn.cpp
+         GameProjectile.cpp
+         Game.cpp
+         FMyoPlugin.cpp
+         MyoHubWorker.cpp
+         MyoPlugin.generated.cpp
+         MyoPluginActor.cpp
+         MyoComponent.cpp
+         MyoPlayerController.cpp
+         MyoDelegateBlueprint.cpp
+         MyoInterface.cpp
+         MyoController.cpp
+         MyoDelegate.cpp
+         [21/22] Link UE4-MyoPlugin.lib
+         [22/22] Link Game.exe
          WiiYourself!_v2_0.lib(wiimote.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
             ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.exp を作成中
          コード生成しています。
          コード生成が終了しました。
          -------- End Detailed Actions Stats -----------------------------------------------------------
-         Total build time: 91.27 seconds
+         Total build time: 104.93 seconds
      1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:01:32.00
+経過時間 00:01:50.65
