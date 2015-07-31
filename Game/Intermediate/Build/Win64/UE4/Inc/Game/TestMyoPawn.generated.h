@@ -15,19 +15,43 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define Game_Source_Game_TestMyoPawn_h_14_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execMyoVibrate) \
+	DECLARE_FUNCTION(execMyoLongVibrate) \
 	{ \
 		P_FINISH; \
-		this->MyoVibrate(); \
+		this->MyoLongVibrate(); \
+	} \
+ \
+	DECLARE_FUNCTION(execMyoMediumVibrate) \
+	{ \
+		P_FINISH; \
+		this->MyoMediumVibrate(); \
+	} \
+ \
+	DECLARE_FUNCTION(execMyoShortVibrate) \
+	{ \
+		P_FINISH; \
+		this->MyoShortVibrate(); \
 	}
 
 
 #define Game_Source_Game_TestMyoPawn_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execMyoVibrate) \
+	DECLARE_FUNCTION(execMyoLongVibrate) \
 	{ \
 		P_FINISH; \
-		this->MyoVibrate(); \
+		this->MyoLongVibrate(); \
+	} \
+ \
+	DECLARE_FUNCTION(execMyoMediumVibrate) \
+	{ \
+		P_FINISH; \
+		this->MyoMediumVibrate(); \
+	} \
+ \
+	DECLARE_FUNCTION(execMyoShortVibrate) \
+	{ \
+		P_FINISH; \
+		this->MyoShortVibrate(); \
 	}
 
 

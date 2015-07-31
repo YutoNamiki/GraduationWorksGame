@@ -28,9 +28,11 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	IMPLEMENT_CLASS(AGameProjectile, 2635654683);
 	void ATestMyoPawn::StaticRegisterNativesATestMyoPawn()
 	{
-		FNativeFunctionRegistrar::RegisterFunction(ATestMyoPawn::StaticClass(),"MyoVibrate",(Native)&ATestMyoPawn::execMyoVibrate);
+		FNativeFunctionRegistrar::RegisterFunction(ATestMyoPawn::StaticClass(),"MyoLongVibrate",(Native)&ATestMyoPawn::execMyoLongVibrate);
+		FNativeFunctionRegistrar::RegisterFunction(ATestMyoPawn::StaticClass(),"MyoMediumVibrate",(Native)&ATestMyoPawn::execMyoMediumVibrate);
+		FNativeFunctionRegistrar::RegisterFunction(ATestMyoPawn::StaticClass(),"MyoShortVibrate",(Native)&ATestMyoPawn::execMyoShortVibrate);
 	}
-	IMPLEMENT_CLASS(ATestMyoPawn, 4084324838);
+	IMPLEMENT_CLASS(ATestMyoPawn, 3014562914);
 	void ATestWiiActor::StaticRegisterNativesATestWiiActor()
 	{
 	}
@@ -62,7 +64,9 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	GAME_API class UFunction* Z_Construct_UFunction_AGameProjectile_OnHit();
 	GAME_API class UClass* Z_Construct_UClass_AGameProjectile_NoRegister();
 	GAME_API class UClass* Z_Construct_UClass_AGameProjectile();
-	GAME_API class UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoVibrate();
+	GAME_API class UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoLongVibrate();
+	GAME_API class UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoMediumVibrate();
+	GAME_API class UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoShortVibrate();
 	GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn_NoRegister();
 	GAME_API class UClass* Z_Construct_UClass_ATestMyoPawn();
 	GAME_API class UClass* Z_Construct_UClass_ATestWiiActor_NoRegister();
@@ -282,13 +286,47 @@ PRAGMA_POP
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGameProjectile(Z_Construct_UClass_AGameProjectile, TEXT("AGameProjectile"));
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGameProjectile);
-	UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoVibrate()
+	UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoLongVibrate()
 	{
 		UObject* Outer=Z_Construct_UClass_ATestMyoPawn();
 		static UFunction* ReturnFunction = NULL;
 		if (!ReturnFunction)
 		{
-			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("MyoVibrate"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535);
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("MyoLongVibrate"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Level"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoMediumVibrate()
+	{
+		UObject* Outer=Z_Construct_UClass_ATestMyoPawn();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("MyoMediumVibrate"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Level"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ATestMyoPawn_MyoShortVibrate()
+	{
+		UObject* Outer=Z_Construct_UClass_ATestMyoPawn();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("MyoShortVibrate"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535);
 			ReturnFunction->Bind();
 			ReturnFunction->StaticLink();
 #if WITH_METADATA
@@ -316,44 +354,19 @@ PRAGMA_POP
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20900080;
 
-				OuterClass->LinkChild(Z_Construct_UFunction_ATestMyoPawn_MyoVibrate());
+				OuterClass->LinkChild(Z_Construct_UFunction_ATestMyoPawn_MyoLongVibrate());
+				OuterClass->LinkChild(Z_Construct_UFunction_ATestMyoPawn_MyoMediumVibrate());
+				OuterClass->LinkChild(Z_Construct_UFunction_ATestMyoPawn_MyoShortVibrate());
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
-				UProperty* NewProp_accelXatFist = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("accelXatFist"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(accelXatFist, ATestMyoPawn), 0x0000000000000005);
-				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bMyoPoseDoubleTap, ATestMyoPawn, bool);
-				UProperty* NewProp_bMyoPoseDoubleTap = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bMyoPoseDoubleTap"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bMyoPoseDoubleTap, ATestMyoPawn), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bMyoPoseDoubleTap, ATestMyoPawn), sizeof(bool), true);
-				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bMyoPoseFingersSpread, ATestMyoPawn, bool);
-				UProperty* NewProp_bMyoPoseFingersSpread = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bMyoPoseFingersSpread"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bMyoPoseFingersSpread, ATestMyoPawn), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bMyoPoseFingersSpread, ATestMyoPawn), sizeof(bool), true);
-				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bMyoPoseFist, ATestMyoPawn, bool);
-				UProperty* NewProp_bMyoPoseFist = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bMyoPoseFist"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bMyoPoseFist, ATestMyoPawn), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bMyoPoseFist, ATestMyoPawn), sizeof(bool), true);
-				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bMyoPoseRest, ATestMyoPawn, bool);
-				UProperty* NewProp_bMyoPoseRest = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bMyoPoseRest"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bMyoPoseRest, ATestMyoPawn), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bMyoPoseRest, ATestMyoPawn), sizeof(bool), true);
-				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bCanPullString, ATestMyoPawn, bool);
-				UProperty* NewProp_bCanPullString = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bCanPullString"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bCanPullString, ATestMyoPawn), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bCanPullString, ATestMyoPawn), sizeof(bool), true);
-				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bCanShootArrow, ATestMyoPawn, bool);
-				UProperty* NewProp_bCanShootArrow = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bCanShootArrow"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bCanShootArrow, ATestMyoPawn), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bCanShootArrow, ATestMyoPawn), sizeof(bool), true);
-PRAGMA_POP
-				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ATestMyoPawn_MyoVibrate()); // 1176713904
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ATestMyoPawn_MyoLongVibrate()); // 3566275245
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ATestMyoPawn_MyoMediumVibrate()); // 2941855155
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ATestMyoPawn_MyoShortVibrate()); // 3373356801
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
 				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TestMyoPawn.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
-				MetaData->SetValue(NewProp_accelXatFist, TEXT("Category"), TEXT("float"));
-				MetaData->SetValue(NewProp_accelXatFist, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
-				MetaData->SetValue(NewProp_bMyoPoseDoubleTap, TEXT("Category"), TEXT("bool"));
-				MetaData->SetValue(NewProp_bMyoPoseDoubleTap, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
-				MetaData->SetValue(NewProp_bMyoPoseFingersSpread, TEXT("Category"), TEXT("bool"));
-				MetaData->SetValue(NewProp_bMyoPoseFingersSpread, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
-				MetaData->SetValue(NewProp_bMyoPoseFist, TEXT("Category"), TEXT("bool"));
-				MetaData->SetValue(NewProp_bMyoPoseFist, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
-				MetaData->SetValue(NewProp_bMyoPoseRest, TEXT("Category"), TEXT("bool"));
-				MetaData->SetValue(NewProp_bMyoPoseRest, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
-				MetaData->SetValue(NewProp_bCanPullString, TEXT("Category"), TEXT("bool"));
-				MetaData->SetValue(NewProp_bCanPullString, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
-				MetaData->SetValue(NewProp_bCanShootArrow, TEXT("Category"), TEXT("bool"));
-				MetaData->SetValue(NewProp_bCanShootArrow, TEXT("ModuleRelativePath"), TEXT("TestMyoPawn.h"));
 #endif
 			}
 		}
@@ -436,8 +449,8 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Game")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x52FBADAD;
-			Guid.B = 0x092CF8BB;
+			Guid.A = 0x59DB790E;
+			Guid.B = 0x20E71A5C;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
