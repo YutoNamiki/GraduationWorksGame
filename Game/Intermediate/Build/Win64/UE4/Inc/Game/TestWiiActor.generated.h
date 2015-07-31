@@ -13,24 +13,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GAME_TestWiiActor_generated_h
 
-#define Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execPushArrowButton) \
-	{ \
-		P_FINISH; \
-		this->PushArrowButton(); \
-	}
-
-
-#define Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execPushArrowButton) \
-	{ \
-		P_FINISH; \
-		this->PushArrowButton(); \
-	}
-
-
+#define Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS
+#define Game_Source_Game_TestWiiActor_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define Game_Source_Game_TestWiiActor_h_15_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesATestWiiActor(); \
