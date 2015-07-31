@@ -80,8 +80,6 @@ void ATestWiiActor::Tick(float DeltaTime)
 		bPushLeftButton = true;
 	else
 		bPushLeftButton = false;
-
-	UE_LOG(LogTemp, Warning, TEXT("A:%d B:%d Up:%d Down:%d Right:%d Left:%d"), bPushAbutton, bPushBbutton, bPushUpButton, bPushDownButton, bPushRightButton, bPushLeftButton);
 }
 
 void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_state& new_state)
