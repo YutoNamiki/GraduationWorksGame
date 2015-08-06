@@ -5,7 +5,6 @@
 
 void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_state& new_state);
 
-bool bConnected;
 float gSpeedYaw = 0.0f;
 float gSpeedPitch = 0.0f;
 float gSpeedRoll = 0.0f;
@@ -16,8 +15,6 @@ ATestWiiActor::ATestWiiActor()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	bConnected = false;
-
 	remote.ChangedCallback = on_state_change;
 	remote.CallbackTriggerFlags = (state_change_flags)(CONNECTED | CHANGED_ALL);
 }
@@ -26,26 +23,27 @@ ATestWiiActor::ATestWiiActor()
 void ATestWiiActor::BeginPlay()
 {
 	Super::BeginPlay();
-
-	int count = 0;
-	while (!bConnected)
-	{
-		while (!remote.Connect(wiimote::FIRST_AVAILABLE));
-		if (remote.UniqueID == 0)
-			remote.Disconnect();
-		else
-			bConnected = true;
-
-		count++;
-		if (count > 600)
-			break;
-	}
 }
 
 // Called every frame
 void ATestWiiActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (!remote.IsConnected())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Connecting"));
+		remote.Connect(wiimote::FIRST_AVAILABLE);
+		if (remote.UniqueID == 0)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("invalid uniqueID"));
+			UE_LOG(LogTemp, Warning, TEXT("Connect Error"));
+			remote.Disconnect();
+		}
+		else
+			UE_LOG(LogTemp, Warning, TEXT("Connected"));
+		return;
+	}
 
 	motionPlusYaw = gSpeedYaw;
 	motionPlusPitch = gSpeedPitch;
@@ -97,31 +95,31 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 	}
 
 	// モーションプラスの検出したら
-	if (changed & MOTIONPLUS_DETECTED) 
+	if (changed & MOTIONPLUS_DETECTED)
 	{
 		remote.EnableMotionPlus();
 	}
 	// 拡張コネクタにモーションプラスが接続されてたら
-	else if (changed & MOTIONPLUS_EXTENSION_CONNECTED) 
+	else if (changed & MOTIONPLUS_EXTENSION_CONNECTED)
 	{
 		if (remote.MotionPlusEnabled())
 			remote.EnableMotionPlus();
 	}
 	// モーションプラスが拡張コネクタから切断されたら
-	else if (changed & MOTIONPLUS_EXTENSION_DISCONNECTED) 
+	else if (changed & MOTIONPLUS_EXTENSION_DISCONNECTED)
 	{
 		// 再びモーションプラスのデータを有効にする
 		if (remote.MotionPlusConnected())
 			remote.EnableMotionPlus();
 	}
 	// その他の拡張機器が接続されたら
-	else if (changed & EXTENSION_CONNECTED) 
+	else if (changed & EXTENSION_CONNECTED)
 	{
 		if (!remote.IsBalanceBoard())
 			remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_EXT);
 	}
 	// その他の拡張機器が切断されたら
-	else if (changed & EXTENSION_DISCONNECTED) 
+	else if (changed & EXTENSION_DISCONNECTED)
 	{
 		remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR);
 	}
