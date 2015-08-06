@@ -26,45 +26,23 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
-	bool bCanShootArrow;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
-	bool bCanPullString;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
-	bool bMyoPoseRest;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
-	bool bMyoPoseFist;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
-	bool bMyoPoseFingersSpread;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
-	bool bMyoPoseDoubleTap;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
-	float accelXatFist;
 	UFUNCTION(BlueprintCallable, Category = "Level")
-	void MyoVibrate();
+	void MyoShortVibrate();
+	UFUNCTION(BlueprintCallable, Category = "Level")
+	void MyoMediumVibrate();
+	UFUNCTION(BlueprintCallable, Category = "Level")
+	void MyoLongVibrate();
 
 private:
-	FVector myoAccelerarion;
+	const int VIBRATE_SHORT_TIME = 15;
+	const int VIBRATE_MEDIUM_TIME = 30;
+	const int VIBRATE_LONG_TIME = 45;
 
-	float myoOrientationPitch;
-	float myoOrientationYaw;
-	float myoOrientationRoll;
+	int vibrateShortTime;
+	int vibrateMediumTime;
+	int vibrateLongTime;
 
-	void MyoAccelerationX(float Value);
-	void MyoAccelerationY(float Value);
-	void MyoAccelerationZ(float Value);
-
-	void MyoOrientationPitch(float Value);
-	void MyoOrientationYaw(float Value);
-	void MyoOrientationRoll(float Value);
-
-	void MyoPoseRestOn();
-	void MyoPoseFistOn();
-	void MyoPoseFingersSpreadOn();
-	void MyoPoseDoubleTapOn();
-
-	void MyoPoseRestOff();
-	void MyoPoseFistOff();
-	void MyoPoseFingersSpreadOff();
-	void MyoPoseDoubleTapOff();
+	bool bDoVibrateShort;
+	bool bDoVibrateMedium;
+	bool bDoVibrateLong;
 };
