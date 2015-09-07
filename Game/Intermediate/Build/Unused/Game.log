@@ -1,20 +1,26 @@
-﻿2015/08/06 14:45:12 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
+﻿2015/09/03 17:58:56 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
-         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" Game Win64 Development "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
-         Parsing headers for Game
-         Reflection code generated for Game
-         Performing 2 actions (4 in parallel)
+         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 Development "C:\Users\game\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
+         Compiling game modules for hot reload
+         Parsing headers for GameEditor
+         Reflection code generated for GameEditor
+         Performing 3 actions (4 in parallel)
+         [2/3] Link UE4Editor-MyoPlugin-9162.dll
          TestWiiActor.cpp
-         [2/2] Link Game.exe
-         WiiYourself!_v2_0.lib(wiimote.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.exp を作成中
-         コード生成しています。
-         コード生成が終了しました。
+            ライブラリ C:\Users\game\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-9162.lib とオブジェクト C:\Users\game\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-9162.exp を作成中
+         [3/3] Link UE4Editor-Game-1694.dll
+     1>WiiYourself!_v2_0.lib(wiimote.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '2' が 0 の値 'Game.h.obj' と一致しません。
+     1>WiiYourself!_v2_0.lib(wiimote.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MDd_DynamicDebug' が MD_DynamicRelease の値 'Game.h.obj' と一致しません。
+            ライブラリ C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-1694.lib とオブジェクト C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-1694.exp を作成中
+     1>WiiYourself!_v2_0.lib(wiimote.obj) : error LNK2019: 未解決の外部シンボル __imp__CrtDbgReportW が関数 "public: __cdecl wiimote::wiimote(void)" (??0wiimote@@QEAA@XZ) で参照されました。
+     1>C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-1694.dll : fatal error LNK1120: 1 件の未解決の外部参照
          -------- End Detailed Actions Stats -----------------------------------------------------------
-         Total build time: 23.49 seconds
-     1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
+     1>ERROR : UBT error : Failed to produce item: C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-1694.dll
+         Total build time: 106.64 seconds
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.MakeFile.Targets(38,5): error MSB3073: コマンド ""C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 Development "C:\Users\game\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket" はコード -1 で終了しました。
+     1>プロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
 
-ビルドに成功しました。
+ビルドに失敗しました。
 
-経過時間 00:00:23.73
+経過時間 00:01:48.22

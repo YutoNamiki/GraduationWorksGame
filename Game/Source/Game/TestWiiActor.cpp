@@ -32,16 +32,19 @@ void ATestWiiActor::Tick(float DeltaTime)
 
 	if (!remote.IsConnected())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Connecting"));
-		remote.Connect(wiimote::FIRST_AVAILABLE);
-		if (remote.UniqueID == 0)
+		UE_LOG(LogTemp, Warning, TEXT("Wiiremote is Connecting"));
+		if (!remote.Connect(wiimote::FIRST_AVAILABLE))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("invalid uniqueID"));
-			UE_LOG(LogTemp, Warning, TEXT("Connect Error"));
-			remote.Disconnect();
+			UE_LOG(LogTemp, Warning, TEXT("Wiiremote connect is failed"));
+			if (remote.UniqueID == 0)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Invalid wiiremote's uniqueID"));
+				remote.Disconnect();
+			}
+			UE_LOG(LogTemp, Warning, TEXT("Wiiremote connect Error"));
 		}
 		else
-			UE_LOG(LogTemp, Warning, TEXT("Connected"));
+			UE_LOG(LogTemp, Warning, TEXT("Wiiremote is connected"));
 		return;
 	}
 
@@ -95,7 +98,7 @@ void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_
 	}
 
 	// モーションプラスの検出したら
-	if (changed & MOTIONPLUS_DETECTED)
+	if (changed & MOTIONPLUS_DETECTED)                              
 	{
 		remote.EnableMotionPlus();
 	}
