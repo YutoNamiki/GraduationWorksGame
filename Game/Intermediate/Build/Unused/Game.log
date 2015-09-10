@@ -1,43 +1,48 @@
-﻿2015/09/10 15:56:11 にビルドを開始しました。
+﻿2015/09/10 16:11:06 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Rebuild ターゲット)。
      1>Rebuild:
-         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Rebuild.bat" Game Win64 Development "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
-         Cleaning Game Binaries...
-         Parsing headers for Game
-         Reflection code generated for Game
-         Performing 24 actions (4 in parallel)
-         PCH.Game.h.cpp
-         PCH.UELinkerFixupsName.h.cpp
+         "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Rebuild.bat" GameEditor Win64 Development "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
+         Cleaning GameEditor Binaries...
+         Compiling game modules for hot reload
+         Compiling game modules for hot reload
+         Parsing headers for GameEditor
+         Reflection code generated for GameEditor
+         Performing 26 actions (4 in parallel)
+         [4/26] Resource PCLaunch.rc
+         [3/26] Resource ModuleVersionResource.rc.inl
          PCH.MyoPluginPrivatePCH.h.cpp
-         UELinkerFixups.cpp
+         PCH.Game.h.cpp
+         [5/26] Resource ModuleVersionResource.rc.inl
+         [6/26] Resource PCLaunch.rc
          GameHUD.cpp
-         Game.generated.cpp
          GameCharacter.cpp
+         Game.generated.cpp
          GameGameMode.cpp
          TestWiiActor.cpp
          TestMyoPawn.cpp
          GameProjectile.cpp
          Game.cpp
          FMyoPlugin.cpp
-         MyoPluginActor.cpp
          MyoPlugin.generated.cpp
          MyoHubWorker.cpp
-         MyoComponent.cpp
          MyoPlayerController.cpp
+         MyoPluginActor.cpp
+         MyoComponent.cpp
          MyoDelegateBlueprint.cpp
          MyoInterface.cpp
          MyoController.cpp
          MyoDelegate.cpp
-         [23/24] Link UE4-MyoPlugin.lib
-         [24/24] Link Game.exe
+         [25/26] Link UE4Editor-MyoPlugin-2804.dll
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-2804.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-2804.exp を作成中
+         [26/26] Link UE4Editor-Game-560.dll
          WiiYourself!_v2_0.lib(wiimote.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Binaries\Win64\Game.exp を作成中
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-560.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-560.exp を作成中
          コード生成しています。
          コード生成が終了しました。
          -------- End Detailed Actions Stats -----------------------------------------------------------
-         Total build time: 96.39 seconds
+         Total build time: 68.45 seconds
      1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Rebuild ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:01:39.39
+経過時間 00:01:15.74
