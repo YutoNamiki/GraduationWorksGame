@@ -42,6 +42,16 @@ public:
 	bool bPushRightButton;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
 	bool bPushLeftButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushHomeButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushPlusButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushMinusButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushOneButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+	bool bPushTwoButton;
 
 private:
 	wiimote remote;

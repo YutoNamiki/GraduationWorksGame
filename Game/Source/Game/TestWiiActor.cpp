@@ -81,6 +81,31 @@ void ATestWiiActor::Tick(float DeltaTime)
 		bPushLeftButton = true;
 	else
 		bPushLeftButton = false;
+
+	if (remote.Button.Home())
+		bPushHomeButton = true;
+	else
+		bPushHomeButton = false;
+
+	if (remote.Button.Plus())
+		bPushPlusButton = true;
+	else
+		bPushPlusButton = false;
+
+	if (remote.Button.Minus())
+		bPushMinusButton = true;
+	else
+		bPushMinusButton = false;
+
+	if (remote.Button.One())
+		bPushOneButton = true;
+	else
+		bPushOneButton = false;
+
+	if (remote.Button.Two())
+		bPushTwoButton = true;
+	else
+		bPushTwoButton = false;
 }
 
 void on_state_change(wiimote& remote, state_change_flags changed, const wiimote_state& new_state)
