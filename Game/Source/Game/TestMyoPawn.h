@@ -33,8 +33,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Level")
 	void MyoLongVibrate();
 
+	
 private:
-	const int VIBRATE_SHORT_TIME = 20;
+	const int VIBRATE_SHORT_TIME = 80;
 	const int VIBRATE_MEDIUM_TIME = 40;
 	const int VIBRATE_LONG_TIME = 60;
 
