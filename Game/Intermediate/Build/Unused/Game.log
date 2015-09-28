@@ -1,24 +1,23 @@
-﻿2015/09/18 0:36:38 にビルドを開始しました。
+﻿2015/09/28 17:31:22 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
          "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 Development "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
          Compiling game modules for hot reload
          Parsing headers for GameEditor
          Reflection code generated for GameEditor
-         Performing 4 actions (4 in parallel)
-         [3/4] Link UE4Editor-MyoPlugin-2635.dll
-         Game.generated.cpp
-         TestMyoPawn.cpp
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-2635.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-2635.exp を作成中
-         [4/4] Link UE4Editor-Game-5167.dll
+         Performing 3 actions (4 in parallel)
+         [2/3] Link UE4Editor-MyoPlugin-8792.dll
+         WiiComponent.cpp
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-8792.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin-8792.exp を作成中
+         [3/3] Link UE4Editor-Game-8792.dll
          WiiYourself!_v2_0.lib(wiimote.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
-            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-5167.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-5167.exp を作成中
+            ライブラリ C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-8792.lib とオブジェクト C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game-8792.exp を作成中
          コード生成しています。
          コード生成が終了しました。
          -------- End Detailed Actions Stats -----------------------------------------------------------
-         Total build time: 15.79 seconds
+         Total build time: 15.44 seconds
      1>プロジェクト "C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:16.29
+経過時間 00:00:15.66

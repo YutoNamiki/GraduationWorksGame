@@ -23,3 +23,6 @@
 #ifndef GAME_TestWiiActor_generated_h
 	#include "TestWiiActor.h"
 #endif
+#ifndef GAME_WiiComponent_generated_h
+	#include "WiiComponent.h"
+#endif
