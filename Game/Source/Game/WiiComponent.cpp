@@ -18,6 +18,8 @@ UWiiComponent::UWiiComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
+	remote.ChangedCallback = onStateChange;
+	remote.CallbackTriggerFlags = (state_change_flags)(CONNECTED | CHANGED_ALL);
 }
 
 
