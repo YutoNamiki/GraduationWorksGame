@@ -131,36 +131,6 @@
     <ClInclude Include="..\..\Source\Game\Game.h">
       <Filter>Source\Game</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Game\GameCharacter.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Game\GameCharacter.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Game\GameGameMode.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Game\GameGameMode.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Game\GameHUD.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Game\GameHUD.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Game\GameProjectile.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Game\GameProjectile.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Game\TestMyoPawn.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Game\TestMyoPawn.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
     <Filter Include="Source\Game\Chat">
       <UniqueIdentifier>{8A428AA6-D769-419A-8CAC-A407F06C1DA4}</UniqueIdentifier>
     </Filter>
@@ -701,15 +671,5 @@
     <None Include="..\..\Source\Game\WiiYourself\lib\WiiYourself!_v2_0.lib">
       <Filter>Source\Game\WiiYourself\lib</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Game\TestWiiActor.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Game\TestWiiActor.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

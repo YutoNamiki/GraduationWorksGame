@@ -43,7 +43,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Game\TestWiiActor.cpp" />
     <None Include="..\..\Game.uproject" />
     <None Include="..\..\Source\Game.Target.cs" />
     <None Include="..\..\Source\GameEditor.Target.cs" />
@@ -78,16 +77,6 @@
     <None Include="..\..\Source\Game\Game.Build.cs" />
     <ClCompile Include="..\..\Source\Game\Game.cpp" />
     <ClInclude Include="..\..\Source\Game\Game.h" />
-    <ClCompile Include="..\..\Source\Game\GameCharacter.cpp" />
-    <ClInclude Include="..\..\Source\Game\GameCharacter.h" />
-    <ClCompile Include="..\..\Source\Game\GameGameMode.cpp" />
-    <ClInclude Include="..\..\Source\Game\GameGameMode.h" />
-    <ClCompile Include="..\..\Source\Game\GameHUD.cpp" />
-    <ClInclude Include="..\..\Source\Game\GameHUD.h" />
-    <ClCompile Include="..\..\Source\Game\GameProjectile.cpp" />
-    <ClInclude Include="..\..\Source\Game\GameProjectile.h" />
-    <ClCompile Include="..\..\Source\Game\TestMyoPawn.cpp" />
-    <ClInclude Include="..\..\Source\Game\TestMyoPawn.h" />
     <ClInclude Include="..\..\Source\Game\Chat\inc\AuthenticationValues.h" />
     <ClInclude Include="..\..\Source\Game\Chat\inc\Channel.h" />
     <ClInclude Include="..\..\Source\Game\Chat\inc\Client.h" />
@@ -237,7 +226,6 @@
     <None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_mt_x64.pdb" />
     <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_md_x64.lib" />
     <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_mt_x64.lib" />
-    <ClInclude Include="..\..\Source\Game\TestWiiActor.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_common.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_state.h" />
