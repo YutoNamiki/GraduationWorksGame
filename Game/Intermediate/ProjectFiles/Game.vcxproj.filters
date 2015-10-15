@@ -672,4 +672,14 @@
       <Filter>Source\Game\WiiYourself\lib</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Game\WiiComponent.cpp">
+      <Filter>Source\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Game\WiiComponent.h">
+      <Filter>Source\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
