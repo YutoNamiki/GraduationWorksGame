@@ -43,6 +43,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Game\WiiComponent.cpp" />
     <None Include="..\..\Game.uproject" />
     <None Include="..\..\Source\Game.Target.cs" />
     <None Include="..\..\Source\GameEditor.Target.cs" />
@@ -226,6 +227,7 @@
     <None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_mt_x64.pdb" />
     <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_md_x64.lib" />
     <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_mt_x64.lib" />
+    <ClInclude Include="..\..\Source\Game\WiiComponent.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_common.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_state.h" />
