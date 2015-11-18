@@ -39,9 +39,12 @@ void UWiiComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorC
 	Super::TickComponent( DeltaTime, TickType, ThisTickFunction );
 
 	// ...
+	if (tryCount > 10)
+		return;
 	if (!remote.IsConnected())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Wiiremote is Connecting"));
+		tryCount++;
+		UE_LOG(LogTemp, Warning, TEXT("%d:Wiiremote is Connecting"), tryCount);
 		if (!remote.Connect(wiimote::FIRST_AVAILABLE))
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Wiiremote connect is failed"));

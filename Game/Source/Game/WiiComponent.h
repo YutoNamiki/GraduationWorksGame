@@ -56,5 +56,6 @@ public:
 
 private:
 	wiimote remote;
+	int tryCount = 0;
 	
 };
