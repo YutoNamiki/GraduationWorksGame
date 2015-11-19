@@ -5,6 +5,42 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
+#ifndef GAME_PathFinderInterface_generated_h
+	#include "AI/PathFinderInterface.h"
+#endif
+#ifndef GAME_ConvertingResultPath_generated_h
+	#include "AI/ConvertingResultPath.h"
+#endif
+#ifndef GAME_FindingPathByAStarAlgorithm_generated_h
+	#include "AI/FindingPathByAStarAlgorithm.h"
+#endif
+#ifndef GAME_GettingEndNode_generated_h
+	#include "AI/GettingEndNode.h"
+#endif
+#ifndef GAME_GettingStartNode_generated_h
+	#include "AI/GettingStartNode.h"
+#endif
+#ifndef GAME_LineTracingForStartAndEnd_generated_h
+	#include "AI/LineTracingForStartAndEnd.h"
+#endif
+#ifndef GAME_LoadingFromDataMap_generated_h
+	#include "AI/LoadingFromDataMap.h"
+#endif
+#ifndef GAME_NavigationVolumeActor_generated_h
+	#include "AI/NavigationVolumeActor.h"
+#endif
+#ifndef GAME_PathFindingComponent_generated_h
+	#include "AI/PathFindingComponent.h"
+#endif
+#ifndef GAME_TimeCounterComponent_generated_h
+	#include "TimeCounterComponent.h"
+#endif
+#ifndef GAME_WaypointComponent_generated_h
+	#include "AI/WaypointComponent.h"
+#endif
+#ifndef GAME_WaypointPathComponent_generated_h
+	#include "AI/WaypointPathComponent.h"
+#endif
 #ifndef GAME_WiiComponent_generated_h
 	#include "WiiComponent.h"
 #endif

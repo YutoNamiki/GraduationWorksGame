@@ -43,7 +43,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Game\WiiComponent.cpp" />
     <None Include="..\..\Game.uproject" />
     <None Include="..\..\Source\Game.Target.cs" />
     <None Include="..\..\Source\GameEditor.Target.cs" />
@@ -76,158 +75,34 @@
     <None Include="..\..\Plugins\MyoPlugin\MyoPlugin.uplugin" />
     <None Include="..\..\Plugins\MyoPlugin\Resources\Icon128.png" />
     <None Include="..\..\Source\Game\Game.Build.cs" />
+    <ClCompile Include="..\..\Source\Game\AI\NavigationVolumeActor.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFindingComponent.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFinding\ConvertingResultPath.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFinding\FindingPathByAStarAlgorithm.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFinding\GettingEndNode.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFinding\GettingStartNode.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFinding\LineTracingForStartAndEnd.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFinding\LoadingFromDataMap.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\WaypointComponent.cpp" />
+    <ClCompile Include="..\..\Source\Game\AI\WaypointPathComponent.cpp" />
     <ClCompile Include="..\..\Source\Game\Game.cpp" />
+    <ClInclude Include="..\..\Source\Game\AI\NavigationVolumeActor.h" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFindingComponent.h" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFinding\ConvertingResultPath.h" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFinding\FindingPathByAStarAlgorithm.h" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFinding\GettingEndNode.h" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFinding\GettingStartNode.h" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFinding\LineTracingForStartAndEnd.h" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFinding\LoadingFromDataMap.h" />
+    <ClInclude Include="..\..\Source\Game\AI\WaypointComponent.h" />
+    <ClInclude Include="..\..\Source\Game\AI\WaypointPathComponent.h" />
     <ClInclude Include="..\..\Source\Game\Game.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\AuthenticationValues.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Channel.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Client.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Listener.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Peer.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\ClientState.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\CustomAuthenticationType.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\DisconnectCause.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\ErrorCode.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\UserStatus.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\AuthenticationValuesSecretSetter.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\EventCode.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\OperationCode.h" />
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\ParameterCode.h" />
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_debug_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\Chat\lib\chat-cpp_vc12_debug_windows_md_x64.pdb" />
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_debug_windows_mt_x64.lib" />
-    <None Include="..\..\Source\Game\Chat\lib\chat-cpp_vc12_debug_windows_mt_x64.pdb" />
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_release_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_release_windows_mt_x64.lib" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\ANSIString.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Base.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\BaseCharString.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\BaseListener.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Common.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\CustomType.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\CustomTypeBase.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\CustomTypeFactory.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\defines.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\DeSerializer.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Dictionary.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\DictionaryBase.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\EGTime.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Hashtable.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\JString.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\JVector.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\KeyObject.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Logger.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Object.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\platformLayer.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\platform_definition.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\porting.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Serializer.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\ToString.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\UTF8String.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\ValueObject.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Enums\DebugLevel.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Enums\TypeCode.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ArrayLengthType.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\CompileTimeAssertTrue.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ConfirmAllowed.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ConfirmAllowedKey.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\CustomTypeCallbackWrapper.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\Data.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\debug_assert.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\DeSerializerImplementation.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EnableIf.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EndianCorrectCast.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EndianCorrectCastImplementation.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\IsDerivedFrom.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\IsPrimitiveType.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\KeyToObject.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\MathHelper.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ObjectToStringConverter.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\PrimitiveToStringConverter.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\RemoveConst.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\RemovePointer.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\SerializerImplementation.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\Thread.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ToStringImplementation.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\TypeName.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ValueToObject.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Allocate.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\Entry.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\Interface.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\MemoryPool.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\MemoryPoolManager.h" />
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\RawStorage.h" />
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_debug_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\Common\lib\common-cpp_vc12_debug_windows_md_x64.pdb" />
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_debug_windows_mt_x64.lib" />
-    <None Include="..\..\Source\Game\Common\lib\common-cpp_vc12_debug_windows_mt_x64.pdb" />
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_release_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_release_windows_mt_x64.lib" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\AuthenticationValues.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Client.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\FriendInfo.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Listener.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\LobbyStatsRequest.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\LobbyStatsResponse.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\MutablePlayer.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\MutableRoom.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Peer.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Player.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Room.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\CustomAuthenticationType.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\DisconnectCause.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\ErrorCode.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\LobbyType.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\MatchmakingMode.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\PeerStates.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\ServerType.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\AuthenticationValuesSecretSetter.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\MutablePlayerFactory.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\MutableRoomFactory.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerFactory.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerMovementInformant.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerPropertiesCacher.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerPropertiesUpdateInformant.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\RoomFactory.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\RoomPropertiesCacher.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Utils.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\EventCode.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\JoinType.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\OperationCode.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\ParameterCode.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\Properties\Player.h" />
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\Properties\Room.h" />
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_debug_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\LoadBalancing\lib\loadbalancing-cpp_vc12_debug_windows_md_x64.pdb" />
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_debug_windows_mt_x64.lib" />
-    <None Include="..\..\Source\Game\LoadBalancing\lib\loadbalancing-cpp_vc12_debug_windows_mt_x64.pdb" />
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_release_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_release_windows_mt_x64.lib" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\EventData.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\LitePeer.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\OperationRequest.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\OperationResponse.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\PhotonListener.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\PhotonPeer.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\TrafficStats.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\TrafficStatsGameLevel.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ConnectionProtocol.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ErrorCode.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventCache.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventCode.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventKey.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\NetworkPort.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\OperationCode.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ParameterCode.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\PeerState.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ReceiverGroup.h" />
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\StatusCode.h" />
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_debug_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_md_x64.pdb" />
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_debug_windows_mt_x64.lib" />
-    <None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_mt_x64.pdb" />
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_md_x64.lib" />
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_mt_x64.lib" />
+    <ClCompile Include="..\..\Source\Game\TimeCounterComponent.cpp" />
+    <ClCompile Include="..\..\Source\Game\WiiComponent.cpp" />
+    <ClInclude Include="..\..\Source\Game\TimeCounterComponent.h" />
     <ClInclude Include="..\..\Source\Game\WiiComponent.h" />
+    <ClCompile Include="..\..\Source\Game\AI\PathFinding\PathFinderInterface.cpp" />
+    <ClInclude Include="..\..\Source\Game\AI\PathFinding\PathFinderInterface.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_common.h" />
     <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_state.h" />
@@ -314,9 +189,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'">
-    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -331,9 +206,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
-    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -376,9 +251,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'">
-    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -393,9 +268,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
-    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -427,9 +302,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'">
-    <IncludePath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\inc;$(IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\WiiYourself\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />

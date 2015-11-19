@@ -425,9 +425,10 @@ C:\Program Files\Epic Games\4.8\Engine\Plugins\ScriptGeneratorPlugin\Source\Scri
 C:\Program Files\Epic Games\4.8\Engine\Plugins\ScriptPlugin\Source\ScriptEditorPlugin\ScriptEditorPlugin.Build.cs
 C:\Program Files\Epic Games\4.8\Engine\Plugins\ScriptPlugin\Source\ScriptPlugin\ScriptPlugin.Build.cs
 C:\Program Files\Epic Games\4.8\Engine\Plugins\Slate\SlateRemote\Source\SlateRemote\SlateRemote.Build.cs
-C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Source\MyoPlugin\MyoPlugin.Build.cs
-C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game\Game.Build.cs
+C:\Users\game\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Source\MyoPlugin\MyoPlugin.Build.cs
+C:\Users\game\Desktop\GraduationWorksGame\Game\Source\Game\Game.Build.cs
 C:\Program Files\Epic Games\4.8\Engine\Source\UE4Editor.Target.cs
 C:\Program Files\Epic Games\4.8\Engine\Source\UE4Game.Target.cs
-C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\Game.Target.cs
-C:\Users\pc-14\Desktop\GraduationWorksGame\Game\Source\GameEditor.Target.cs
+C:\Users\game\Desktop\GraduationWorksGame\Game\Source\Game.Target.cs
+C:\Users\game\Desktop\GraduationWorksGame\Game\Source\GameEditor.Target.cs
+cs

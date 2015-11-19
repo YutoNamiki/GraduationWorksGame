@@ -8,11 +8,7 @@ public class Game : ModuleRules
     private string modulePath { get { return Path.GetDirectoryName(RulesCompiler.GetModuleFilename(this.GetType().Name)); } }
     private string[] libraryNames = new string[]
     {
-        "WiiYourself",
-        "Photon",
-        "LoadBalancing",
-        "Common",
-        "Chat"
+        "WiiYourself"
     };
 
 	public Game(TargetInfo Target)

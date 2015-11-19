@@ -1,66 +1,21 @@
-﻿2015/10/22 15:56:35 にビルドを開始しました。
+﻿2015/11/19 15:55:21 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット)。
      1>Build:
          "C:\Program Files\Epic Games\4.8\Engine\Build\BatchFiles\Build.bat" GameEditor Win64 Development "C:\Users\game\Desktop\GraduationWorksGame\Game\Game.uproject" -rocket
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-1374.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-1374.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-2090.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-2090.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-2919.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-2919.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-3089.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-3089.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-345.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-345.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-4208.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-4208.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-4411.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-4411.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-4576.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-4576.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-5167.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-5167.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-560.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-8396.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-8396.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-8792.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-8792.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-8949.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-8949.pdb".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-9384.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-9541.dll".
-         Deleting old hot reload file: "C:\Users\game\Desktop\GraduationWorksGame\Game\Binaries\Win64\UE4Editor-Game-9541.pdb".
-         Performing 21 actions (4 in parallel)
-         [3/21] Resource ModuleVersionResource.rc.inl
-         [4/21] Resource PCLaunch.rc
-         PCH.MyoPluginPrivatePCH.h.cpp
-         PCH.Game.h.cpp
-         [5/21] Resource ModuleVersionResource.rc.inl
-         [6/21] Resource PCLaunch.rc
+         Parsing headers for GameEditor
+         Reflection code generated for GameEditor
+         Performing 3 actions (4 in parallel)
          Game.generated.cpp
-         WiiComponent.cpp
-         Game.cpp
-         MyoHubWorker.cpp
-         MyoComponent.cpp
-         MyoPlugin.generated.cpp
-         FMyoPlugin.cpp
-         MyoPluginActor.cpp
-         MyoPlayerController.cpp
-         MyoDelegateBlueprint.cpp
-         MyoInterface.cpp
-         MyoController.cpp
-         MyoDelegate.cpp
-         [20/21] Link UE4Editor-MyoPlugin.dll
-            ライブラリ C:\Users\game\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin.lib とオブジェクト C:\Users\game\Desktop\GraduationWorksGame\Game\Plugins\MyoPlugin\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-MyoPlugin.exp を作成中
-         [21/21] Link UE4Editor-Game.dll
+         NavigationVolumeActor.cpp
+         [3/3] Link UE4Editor-Game.dll
          WiiYourself!_v2_0.lib(wiimote.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
             ライブラリ C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game.lib とオブジェクト C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate/Build/Win64\UE4Editor\Development\UE4Editor-Game.exp を作成中
          コード生成しています。
          コード生成が終了しました。
          -------- End Detailed Actions Stats -----------------------------------------------------------
-         Total build time: 98.91 seconds
+         Total build time: 91.69 seconds
      1>プロジェクト "C:\Users\game\Desktop\GraduationWorksGame\Game\Intermediate\ProjectFiles\Game.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:01:42.37
+経過時間 00:01:31.94

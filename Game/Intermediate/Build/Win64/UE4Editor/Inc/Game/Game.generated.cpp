@@ -9,17 +9,1237 @@
 #include "Game.generated.dep.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGame() {}
+static class UEnum* EPathFindingResultState_StaticEnum()
+{
+	static class UEnum* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern GAME_API class UEnum* Z_Construct_UEnum_Game_EPathFindingResultState();
+		extern GAME_API class UPackage* Z_Construct_UPackage_Game();
+		Singleton = GetStaticEnum(Z_Construct_UEnum_Game_EPathFindingResultState, Z_Construct_UPackage_Game(), TEXT("EPathFindingResultState"));
+	}
+	return Singleton;
+}
+static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EPathFindingResultState(EPathFindingResultState_StaticEnum, TEXT("/Script/Game"));
+static class UEnum* EPathFindingState_StaticEnum()
+{
+	static class UEnum* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern GAME_API class UEnum* Z_Construct_UEnum_Game_EPathFindingState();
+		extern GAME_API class UPackage* Z_Construct_UPackage_Game();
+		Singleton = GetStaticEnum(Z_Construct_UEnum_Game_EPathFindingState, Z_Construct_UPackage_Game(), TEXT("EPathFindingState"));
+	}
+	return Singleton;
+}
+static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EPathFindingState(EPathFindingState_StaticEnum, TEXT("/Script/Game"));
+	void UPathFinderInterface::StaticRegisterNativesUPathFinderInterface()
+	{
+	}
+	IMPLEMENT_CLASS(UPathFinderInterface, 363909470);
+	void UConvertingResultPath::StaticRegisterNativesUConvertingResultPath()
+	{
+	}
+	IMPLEMENT_CLASS(UConvertingResultPath, 864074400);
+	void UFindingPathByAStarAlgorithm::StaticRegisterNativesUFindingPathByAStarAlgorithm()
+	{
+	}
+	IMPLEMENT_CLASS(UFindingPathByAStarAlgorithm, 3866650434);
+	void UGettingEndNode::StaticRegisterNativesUGettingEndNode()
+	{
+	}
+	IMPLEMENT_CLASS(UGettingEndNode, 135387969);
+	void UGettingStartNode::StaticRegisterNativesUGettingStartNode()
+	{
+	}
+	IMPLEMENT_CLASS(UGettingStartNode, 1440520167);
+	void ULineTracingForStartAndEnd::StaticRegisterNativesULineTracingForStartAndEnd()
+	{
+	}
+	IMPLEMENT_CLASS(ULineTracingForStartAndEnd, 2132758522);
+	void ULoadingFromDataMap::StaticRegisterNativesULoadingFromDataMap()
+	{
+	}
+	IMPLEMENT_CLASS(ULoadingFromDataMap, 1479818888);
+	void ANavigationVolumeActor::StaticRegisterNativesANavigationVolumeActor()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(ANavigationVolumeActor::StaticClass(),"DrawPathFromActor",(Native)&ANavigationVolumeActor::execDrawPathFromActor);
+		FNativeFunctionRegistrar::RegisterFunction(ANavigationVolumeActor::StaticClass(),"DrawPathFromSceneComponent",(Native)&ANavigationVolumeActor::execDrawPathFromSceneComponent);
+		FNativeFunctionRegistrar::RegisterFunction(ANavigationVolumeActor::StaticClass(),"DrawPathFromVector",(Native)&ANavigationVolumeActor::execDrawPathFromVector);
+		FNativeFunctionRegistrar::RegisterFunction(ANavigationVolumeActor::StaticClass(),"FindPathByActors",(Native)&ANavigationVolumeActor::execFindPathByActors);
+		FNativeFunctionRegistrar::RegisterFunction(ANavigationVolumeActor::StaticClass(),"FindPathBySceneComponent",(Native)&ANavigationVolumeActor::execFindPathBySceneComponent);
+		FNativeFunctionRegistrar::RegisterFunction(ANavigationVolumeActor::StaticClass(),"FindPathByVectors",(Native)&ANavigationVolumeActor::execFindPathByVectors);
+	}
+	IMPLEMENT_CLASS(ANavigationVolumeActor, 2563820779);
+class UScriptStruct* FPathFindingInformation::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern GAME_API class UScriptStruct* Z_Construct_UScriptStruct_FPathFindingInformation();
+		extern GAME_API uint32 Get_Z_Construct_UScriptStruct_FPathFindingInformation_CRC();
+		extern GAME_API class UPackage* Z_Construct_UPackage_Game();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FPathFindingInformation, Z_Construct_UPackage_Game(), TEXT("PathFindingInformation"), sizeof(FPathFindingInformation), Get_Z_Construct_UScriptStruct_FPathFindingInformation_CRC());
+	}
+	return Singleton;
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FPathFindingInformation(FPathFindingInformation::StaticStruct, TEXT("/Script/Game"));
+static struct FScriptStruct_Game_StaticRegisterNativesFPathFindingInformation
+{
+	FScriptStruct_Game_StaticRegisterNativesFPathFindingInformation()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("PathFindingInformation")),new UScriptStruct::TCppStructOps<FPathFindingInformation>);
+	}
+} ScriptStruct_Game_StaticRegisterNativesFPathFindingInformation;
+	void UPathFindingComponent::StaticRegisterNativesUPathFindingComponent()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(UPathFindingComponent::StaticClass(),"DrawPath",(Native)&UPathFindingComponent::execDrawPath);
+		FNativeFunctionRegistrar::RegisterFunction(UPathFindingComponent::StaticClass(),"FindPath",(Native)&UPathFindingComponent::execFindPath);
+	}
+	IMPLEMENT_CLASS(UPathFindingComponent, 25676270);
+	void UTimeCounterComponent::StaticRegisterNativesUTimeCounterComponent()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(UTimeCounterComponent::StaticClass(),"Display",(Native)&UTimeCounterComponent::execDisplay);
+		FNativeFunctionRegistrar::RegisterFunction(UTimeCounterComponent::StaticClass(),"End",(Native)&UTimeCounterComponent::execEnd);
+		FNativeFunctionRegistrar::RegisterFunction(UTimeCounterComponent::StaticClass(),"GetElapsedTimeFromStart",(Native)&UTimeCounterComponent::execGetElapsedTimeFromStart);
+		FNativeFunctionRegistrar::RegisterFunction(UTimeCounterComponent::StaticClass(),"Start",(Native)&UTimeCounterComponent::execStart);
+	}
+	IMPLEMENT_CLASS(UTimeCounterComponent, 4008594046);
+static class UEnum* EState_StaticEnum()
+{
+	static class UEnum* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern GAME_API class UEnum* Z_Construct_UEnum_Game_EState();
+		extern GAME_API class UPackage* Z_Construct_UPackage_Game();
+		Singleton = GetStaticEnum(Z_Construct_UEnum_Game_EState, Z_Construct_UPackage_Game(), TEXT("EState"));
+	}
+	return Singleton;
+}
+static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EState(EState_StaticEnum, TEXT("/Script/Game"));
+	void UWaypointComponent::StaticRegisterNativesUWaypointComponent()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(UWaypointComponent::StaticClass(),"GetChildBoxCollision",(Native)&UWaypointComponent::execGetChildBoxCollision);
+		FNativeFunctionRegistrar::RegisterFunction(UWaypointComponent::StaticClass(),"HasChildBoxCollision",(Native)&UWaypointComponent::execHasChildBoxCollision);
+	}
+	IMPLEMENT_CLASS(UWaypointComponent, 1908922402);
+	void UWaypointPathComponent::StaticRegisterNativesUWaypointPathComponent()
+	{
+	}
+	IMPLEMENT_CLASS(UWaypointPathComponent, 3995297282);
 	void UWiiComponent::StaticRegisterNativesUWiiComponent()
 	{
 	}
 	IMPLEMENT_CLASS(UWiiComponent, 1661209084);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	COREUOBJECT_API class UClass* Z_Construct_UClass_UObject();
+	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FColor();
+	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_APawn_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_AActor();
+	ENGINE_API class UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UActorComponent();
+	ENGINE_API class UClass* Z_Construct_UClass_USceneComponent();
 
+	GAME_API class UEnum* Z_Construct_UEnum_Game_EPathFindingResultState();
+	GAME_API class UEnum* Z_Construct_UEnum_Game_EPathFindingState();
+	GAME_API class UClass* Z_Construct_UClass_UPathFinderInterface_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UPathFinderInterface();
+	GAME_API class UClass* Z_Construct_UClass_UConvertingResultPath_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UConvertingResultPath();
+	GAME_API class UClass* Z_Construct_UClass_UFindingPathByAStarAlgorithm_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UFindingPathByAStarAlgorithm();
+	GAME_API class UClass* Z_Construct_UClass_UGettingEndNode_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UGettingEndNode();
+	GAME_API class UClass* Z_Construct_UClass_UGettingStartNode_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UGettingStartNode();
+	GAME_API class UClass* Z_Construct_UClass_ULineTracingForStartAndEnd_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_ULineTracingForStartAndEnd();
+	GAME_API class UClass* Z_Construct_UClass_ULoadingFromDataMap_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_ULoadingFromDataMap();
+	GAME_API class UFunction* Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromActor();
+	GAME_API class UFunction* Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromSceneComponent();
+	GAME_API class UFunction* Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromVector();
+	GAME_API class UFunction* Z_Construct_UFunction_ANavigationVolumeActor_FindPathByActors();
+	GAME_API class UFunction* Z_Construct_UFunction_ANavigationVolumeActor_FindPathBySceneComponent();
+	GAME_API class UFunction* Z_Construct_UFunction_ANavigationVolumeActor_FindPathByVectors();
+	GAME_API class UClass* Z_Construct_UClass_ANavigationVolumeActor_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_ANavigationVolumeActor();
+	GAME_API class UScriptStruct* Z_Construct_UScriptStruct_FPathFindingInformation();
+	GAME_API class UFunction* Z_Construct_UFunction_UPathFindingComponent_DrawPath();
+	GAME_API class UFunction* Z_Construct_UFunction_UPathFindingComponent_FindPath();
+	GAME_API class UClass* Z_Construct_UClass_UPathFindingComponent_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UPathFindingComponent();
+	GAME_API class UFunction* Z_Construct_UFunction_UTimeCounterComponent_Display();
+	GAME_API class UFunction* Z_Construct_UFunction_UTimeCounterComponent_End();
+	GAME_API class UFunction* Z_Construct_UFunction_UTimeCounterComponent_GetElapsedTimeFromStart();
+	GAME_API class UFunction* Z_Construct_UFunction_UTimeCounterComponent_Start();
+	GAME_API class UClass* Z_Construct_UClass_UTimeCounterComponent_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UTimeCounterComponent();
+	GAME_API class UEnum* Z_Construct_UEnum_Game_EState();
+	GAME_API class UFunction* Z_Construct_UFunction_UWaypointComponent_GetChildBoxCollision();
+	GAME_API class UFunction* Z_Construct_UFunction_UWaypointComponent_HasChildBoxCollision();
+	GAME_API class UClass* Z_Construct_UClass_UWaypointComponent_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UWaypointComponent();
+	GAME_API class UClass* Z_Construct_UClass_UWaypointPathComponent_NoRegister();
+	GAME_API class UClass* Z_Construct_UClass_UWaypointPathComponent();
 	GAME_API class UClass* Z_Construct_UClass_UWiiComponent_NoRegister();
 	GAME_API class UClass* Z_Construct_UClass_UWiiComponent();
 	GAME_API class UPackage* Z_Construct_UPackage_Game();
+	UEnum* Z_Construct_UEnum_Game_EPathFindingResultState()
+	{
+		UPackage* Outer=Z_Construct_UPackage_Game();
+		static UEnum* ReturnEnum = NULL;
+		if (!ReturnEnum)
+		{
+			ReturnEnum = new(EC_InternalUseOnlyConstructor, Outer, TEXT("EPathFindingResultState"), RF_Public|RF_Transient|RF_Native) UEnum(FObjectInitializer());
+			TArray<FName> EnumNames;
+			EnumNames.Add(FName(TEXT("EPathFindingResultState::Failed")));
+			EnumNames.Add(FName(TEXT("EPathFindingResultState::Thinking")));
+			EnumNames.Add(FName(TEXT("EPathFindingResultState::Success")));
+			EnumNames.Add(FName(TEXT("EPathFindingResultState::EPathFindingResultState_MAX")));
+			ReturnEnum->SetEnums(EnumNames, UEnum::ECppForm::EnumClass);
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnEnum->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnEnum, TEXT("BlueprintType"), TEXT("true"));
+			MetaData->SetValue(ReturnEnum, TEXT("Failed.DisplayName"), TEXT("Failed"));
+			MetaData->SetValue(ReturnEnum, TEXT("ModuleRelativePath"), TEXT("AI/PathFinderInterface.h"));
+			MetaData->SetValue(ReturnEnum, TEXT("Success.DisplayName"), TEXT("Success"));
+			MetaData->SetValue(ReturnEnum, TEXT("Thinking.DisplayName"), TEXT("Thinking"));
+#endif
+		}
+		return ReturnEnum;
+	}
+	UEnum* Z_Construct_UEnum_Game_EPathFindingState()
+	{
+		UPackage* Outer=Z_Construct_UPackage_Game();
+		static UEnum* ReturnEnum = NULL;
+		if (!ReturnEnum)
+		{
+			ReturnEnum = new(EC_InternalUseOnlyConstructor, Outer, TEXT("EPathFindingState"), RF_Public|RF_Transient|RF_Native) UEnum(FObjectInitializer());
+			TArray<FName> EnumNames;
+			EnumNames.Add(FName(TEXT("EPathFindingState::None")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::LineTracing")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::GettingStartNode")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::GettingEndNode")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::LoadingFromDataMap")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::PathFinding")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::ConvertingPathToVector")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::Finished")));
+			EnumNames.Add(FName(TEXT("EPathFindingState::EPathFindingState_MAX")));
+			ReturnEnum->SetEnums(EnumNames, UEnum::ECppForm::EnumClass);
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnEnum->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnEnum, TEXT("BlueprintType"), TEXT("true"));
+			MetaData->SetValue(ReturnEnum, TEXT("ConvertingPathToVector.DisplayName"), TEXT("ConvertingPathToVector"));
+			MetaData->SetValue(ReturnEnum, TEXT("Finished.DisplayName"), TEXT("Finished"));
+			MetaData->SetValue(ReturnEnum, TEXT("GettingEndNode.DisplayName"), TEXT("GettingEndNode"));
+			MetaData->SetValue(ReturnEnum, TEXT("GettingStartNode.DisplayName"), TEXT("GettingStartNode"));
+			MetaData->SetValue(ReturnEnum, TEXT("LineTracing.DisplayName"), TEXT("LineTrace"));
+			MetaData->SetValue(ReturnEnum, TEXT("LoadingFromDataMap.DisplayName"), TEXT("LoadingFromDataMap"));
+			MetaData->SetValue(ReturnEnum, TEXT("ModuleRelativePath"), TEXT("AI/PathFinderInterface.h"));
+			MetaData->SetValue(ReturnEnum, TEXT("None.DisplayName"), TEXT("None"));
+			MetaData->SetValue(ReturnEnum, TEXT("PathFinding.DisplayName"), TEXT("PathFinding"));
+#endif
+		}
+		return ReturnEnum;
+	}
+	UClass* Z_Construct_UClass_UPathFinderInterface_NoRegister()
+	{
+		return UPathFinderInterface::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UPathFinderInterface()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			UInterface::StaticClass();
+			Z_Construct_UPackage_Game();
+			OuterClass = UPathFinderInterface::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20084081;
+
+
+				OuterClass->StaticLink();
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UPathFinderInterface(Z_Construct_UClass_UPathFinderInterface, TEXT("UPathFinderInterface"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UPathFinderInterface);
+	UClass* Z_Construct_UClass_UConvertingResultPath_NoRegister()
+	{
+		return UConvertingResultPath::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UConvertingResultPath()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UObject();
+			Z_Construct_UPackage_Game();
+			OuterClass = UConvertingResultPath::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20100080;
+
+
+				OuterClass->Interfaces.Add(FImplementedInterface(Z_Construct_UClass_UPathFinderInterface_NoRegister(), VTABLE_OFFSET(UConvertingResultPath, IPathFinderInterface), false ));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/ConvertingResultPath.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/ConvertingResultPath.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UConvertingResultPath(Z_Construct_UClass_UConvertingResultPath, TEXT("UConvertingResultPath"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UConvertingResultPath);
+	UClass* Z_Construct_UClass_UFindingPathByAStarAlgorithm_NoRegister()
+	{
+		return UFindingPathByAStarAlgorithm::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UFindingPathByAStarAlgorithm()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UObject();
+			Z_Construct_UPackage_Game();
+			OuterClass = UFindingPathByAStarAlgorithm::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20100080;
+
+
+				OuterClass->Interfaces.Add(FImplementedInterface(Z_Construct_UClass_UPathFinderInterface_NoRegister(), VTABLE_OFFSET(UFindingPathByAStarAlgorithm, IPathFinderInterface), false ));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/FindingPathByAStarAlgorithm.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/FindingPathByAStarAlgorithm.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UFindingPathByAStarAlgorithm(Z_Construct_UClass_UFindingPathByAStarAlgorithm, TEXT("UFindingPathByAStarAlgorithm"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UFindingPathByAStarAlgorithm);
+	UClass* Z_Construct_UClass_UGettingEndNode_NoRegister()
+	{
+		return UGettingEndNode::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UGettingEndNode()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UObject();
+			Z_Construct_UPackage_Game();
+			OuterClass = UGettingEndNode::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20100080;
+
+
+				OuterClass->Interfaces.Add(FImplementedInterface(Z_Construct_UClass_UPathFinderInterface_NoRegister(), VTABLE_OFFSET(UGettingEndNode, IPathFinderInterface), false ));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/GettingEndNode.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/GettingEndNode.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UGettingEndNode(Z_Construct_UClass_UGettingEndNode, TEXT("UGettingEndNode"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UGettingEndNode);
+	UClass* Z_Construct_UClass_UGettingStartNode_NoRegister()
+	{
+		return UGettingStartNode::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UGettingStartNode()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UObject();
+			Z_Construct_UPackage_Game();
+			OuterClass = UGettingStartNode::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20100080;
+
+
+				OuterClass->Interfaces.Add(FImplementedInterface(Z_Construct_UClass_UPathFinderInterface_NoRegister(), VTABLE_OFFSET(UGettingStartNode, IPathFinderInterface), false ));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/GettingStartNode.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/GettingStartNode.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UGettingStartNode(Z_Construct_UClass_UGettingStartNode, TEXT("UGettingStartNode"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UGettingStartNode);
+	UClass* Z_Construct_UClass_ULineTracingForStartAndEnd_NoRegister()
+	{
+		return ULineTracingForStartAndEnd::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ULineTracingForStartAndEnd()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UObject();
+			Z_Construct_UPackage_Game();
+			OuterClass = ULineTracingForStartAndEnd::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20100080;
+
+
+				OuterClass->Interfaces.Add(FImplementedInterface(Z_Construct_UClass_UPathFinderInterface_NoRegister(), VTABLE_OFFSET(ULineTracingForStartAndEnd, IPathFinderInterface), false ));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/LineTracingForStartAndEnd.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/LineTracingForStartAndEnd.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ULineTracingForStartAndEnd(Z_Construct_UClass_ULineTracingForStartAndEnd, TEXT("ULineTracingForStartAndEnd"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ULineTracingForStartAndEnd);
+	UClass* Z_Construct_UClass_ULoadingFromDataMap_NoRegister()
+	{
+		return ULoadingFromDataMap::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ULoadingFromDataMap()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UObject();
+			Z_Construct_UPackage_Game();
+			OuterClass = ULoadingFromDataMap::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20100080;
+
+
+				OuterClass->Interfaces.Add(FImplementedInterface(Z_Construct_UClass_UPathFinderInterface_NoRegister(), VTABLE_OFFSET(ULoadingFromDataMap, IPathFinderInterface), false ));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/LoadingFromDataMap.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/LoadingFromDataMap.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ULoadingFromDataMap(Z_Construct_UClass_ULoadingFromDataMap, TEXT("ULoadingFromDataMap"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ULoadingFromDataMap);
+	UFunction* Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromActor()
+	{
+		struct NavigationVolumeActor_eventDrawPathFromActor_Parms
+		{
+			AActor* start;
+			TArray<FVector> route;
+			FColor pathColor;
+			float duration;
+			float pathThickness;
+		};
+		UObject* Outer=Z_Construct_UClass_ANavigationVolumeActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("DrawPathFromActor"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04820401, 65535, sizeof(NavigationVolumeActor_eventDrawPathFromActor_Parms));
+			UProperty* NewProp_pathThickness = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("pathThickness"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(pathThickness, NavigationVolumeActor_eventDrawPathFromActor_Parms), 0x0000000000000080);
+			UProperty* NewProp_duration = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("duration"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(duration, NavigationVolumeActor_eventDrawPathFromActor_Parms), 0x0000000000000080);
+			UProperty* NewProp_pathColor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("pathColor"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(pathColor, NavigationVolumeActor_eventDrawPathFromActor_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FColor());
+			UProperty* NewProp_route = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("route"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(route, NavigationVolumeActor_eventDrawPathFromActor_Parms), 0x0000000000000080);
+			UProperty* NewProp_route_Inner = new(EC_InternalUseOnlyConstructor, NewProp_route, TEXT("route"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(start, NavigationVolumeActor_eventDrawPathFromActor_Parms), 0x0000000000000080, Z_Construct_UClass_AActor_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_duration"), TEXT("0.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_pathColor"), TEXT("(R=0,G=0,B=0,A=255)"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_pathThickness"), TEXT("1.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromSceneComponent()
+	{
+		struct NavigationVolumeActor_eventDrawPathFromSceneComponent_Parms
+		{
+			USceneComponent* start;
+			TArray<FVector> route;
+			FColor pathColor;
+			float duration;
+			float pathThickness;
+		};
+		UObject* Outer=Z_Construct_UClass_ANavigationVolumeActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("DrawPathFromSceneComponent"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04820401, 65535, sizeof(NavigationVolumeActor_eventDrawPathFromSceneComponent_Parms));
+			UProperty* NewProp_pathThickness = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("pathThickness"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(pathThickness, NavigationVolumeActor_eventDrawPathFromSceneComponent_Parms), 0x0000000000000080);
+			UProperty* NewProp_duration = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("duration"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(duration, NavigationVolumeActor_eventDrawPathFromSceneComponent_Parms), 0x0000000000000080);
+			UProperty* NewProp_pathColor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("pathColor"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(pathColor, NavigationVolumeActor_eventDrawPathFromSceneComponent_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FColor());
+			UProperty* NewProp_route = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("route"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(route, NavigationVolumeActor_eventDrawPathFromSceneComponent_Parms), 0x0000000000000080);
+			UProperty* NewProp_route_Inner = new(EC_InternalUseOnlyConstructor, NewProp_route, TEXT("route"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(start, NavigationVolumeActor_eventDrawPathFromSceneComponent_Parms), 0x0000000000080080, Z_Construct_UClass_USceneComponent_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_duration"), TEXT("0.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_pathColor"), TEXT("(R=0,G=0,B=0,A=255)"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_pathThickness"), TEXT("1.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+			MetaData->SetValue(NewProp_start, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromVector()
+	{
+		struct NavigationVolumeActor_eventDrawPathFromVector_Parms
+		{
+			FVector start;
+			TArray<FVector> route;
+			FColor pathColor;
+			float duration;
+			float pathThickness;
+		};
+		UObject* Outer=Z_Construct_UClass_ANavigationVolumeActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("DrawPathFromVector"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04820401, 65535, sizeof(NavigationVolumeActor_eventDrawPathFromVector_Parms));
+			UProperty* NewProp_pathThickness = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("pathThickness"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(pathThickness, NavigationVolumeActor_eventDrawPathFromVector_Parms), 0x0000000000000080);
+			UProperty* NewProp_duration = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("duration"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(duration, NavigationVolumeActor_eventDrawPathFromVector_Parms), 0x0000000000000080);
+			UProperty* NewProp_pathColor = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("pathColor"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(pathColor, NavigationVolumeActor_eventDrawPathFromVector_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FColor());
+			UProperty* NewProp_route = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("route"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(route, NavigationVolumeActor_eventDrawPathFromVector_Parms), 0x0000000000000080);
+			UProperty* NewProp_route_Inner = new(EC_InternalUseOnlyConstructor, NewProp_route, TEXT("route"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(start, NavigationVolumeActor_eventDrawPathFromVector_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FVector());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_duration"), TEXT("0.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_pathColor"), TEXT("(R=0,G=0,B=0,A=255)"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_pathThickness"), TEXT("1.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANavigationVolumeActor_FindPathByActors()
+	{
+		struct NavigationVolumeActor_eventFindPathByActors_Parms
+		{
+			APawn* findPawn;
+			TArray<FVector> resultRoute;
+			AActor* start;
+			AActor* end;
+			TEnumAsByte<EPathFindingResultState> ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANavigationVolumeActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("FindPathByActors"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04420401, 65535, sizeof(NavigationVolumeActor_eventFindPathByActors_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UByteProperty(CPP_PROPERTY_BASE(ReturnValue, NavigationVolumeActor_eventFindPathByActors_Parms), 0x0000000000000580, Z_Construct_UEnum_Game_EPathFindingResultState());
+			UProperty* NewProp_end = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("end"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(end, NavigationVolumeActor_eventFindPathByActors_Parms), 0x0000000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(start, NavigationVolumeActor_eventFindPathByActors_Parms), 0x0000000000000080, Z_Construct_UClass_AActor_NoRegister());
+			UProperty* NewProp_resultRoute = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(resultRoute, NavigationVolumeActor_eventFindPathByActors_Parms), 0x0000000000000180);
+			UProperty* NewProp_resultRoute_Inner = new(EC_InternalUseOnlyConstructor, NewProp_resultRoute, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_findPawn = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("findPawn"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(findPawn, NavigationVolumeActor_eventFindPathByActors_Parms), 0x0000000000000080, Z_Construct_UClass_APawn_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANavigationVolumeActor_FindPathBySceneComponent()
+	{
+		struct NavigationVolumeActor_eventFindPathBySceneComponent_Parms
+		{
+			APawn* findPawn;
+			TArray<FVector> resultRoute;
+			USceneComponent* start;
+			USceneComponent* end;
+			TEnumAsByte<EPathFindingResultState> ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANavigationVolumeActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("FindPathBySceneComponent"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04420401, 65535, sizeof(NavigationVolumeActor_eventFindPathBySceneComponent_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UByteProperty(CPP_PROPERTY_BASE(ReturnValue, NavigationVolumeActor_eventFindPathBySceneComponent_Parms), 0x0000000000000580, Z_Construct_UEnum_Game_EPathFindingResultState());
+			UProperty* NewProp_end = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("end"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(end, NavigationVolumeActor_eventFindPathBySceneComponent_Parms), 0x0000000000080080, Z_Construct_UClass_USceneComponent_NoRegister());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(start, NavigationVolumeActor_eventFindPathBySceneComponent_Parms), 0x0000000000080080, Z_Construct_UClass_USceneComponent_NoRegister());
+			UProperty* NewProp_resultRoute = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(resultRoute, NavigationVolumeActor_eventFindPathBySceneComponent_Parms), 0x0000000000000180);
+			UProperty* NewProp_resultRoute_Inner = new(EC_InternalUseOnlyConstructor, NewProp_resultRoute, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_findPawn = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("findPawn"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(findPawn, NavigationVolumeActor_eventFindPathBySceneComponent_Parms), 0x0000000000000080, Z_Construct_UClass_APawn_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+			MetaData->SetValue(NewProp_end, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_start, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANavigationVolumeActor_FindPathByVectors()
+	{
+		struct NavigationVolumeActor_eventFindPathByVectors_Parms
+		{
+			APawn* findPawn;
+			TArray<FVector> resultRoute;
+			FVector start;
+			FVector end;
+			TEnumAsByte<EPathFindingResultState> ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_ANavigationVolumeActor();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("FindPathByVectors"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04C20401, 65535, sizeof(NavigationVolumeActor_eventFindPathByVectors_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UByteProperty(CPP_PROPERTY_BASE(ReturnValue, NavigationVolumeActor_eventFindPathByVectors_Parms), 0x0000000000000580, Z_Construct_UEnum_Game_EPathFindingResultState());
+			UProperty* NewProp_end = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("end"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(end, NavigationVolumeActor_eventFindPathByVectors_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(start, NavigationVolumeActor_eventFindPathByVectors_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_resultRoute = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(resultRoute, NavigationVolumeActor_eventFindPathByVectors_Parms), 0x0000000000000180);
+			UProperty* NewProp_resultRoute_Inner = new(EC_InternalUseOnlyConstructor, NewProp_resultRoute, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_findPawn = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("findPawn"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(findPawn, NavigationVolumeActor_eventFindPathByVectors_Parms), 0x0000000000000080, Z_Construct_UClass_APawn_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_ANavigationVolumeActor_NoRegister()
+	{
+		return ANavigationVolumeActor::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ANavigationVolumeActor()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage_Game();
+			OuterClass = ANavigationVolumeActor::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromActor());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromSceneComponent());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromVector());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANavigationVolumeActor_FindPathByActors());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANavigationVolumeActor_FindPathBySceneComponent());
+				OuterClass->LinkChild(Z_Construct_UFunction_ANavigationVolumeActor_FindPathByVectors());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_MaxCaluclationTime = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("MaxCaluclationTime"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(MaxCaluclationTime, ANavigationVolumeActor), 0x0000000000000005);
+				UProperty* NewProp_Thickness = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Thickness"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(Thickness, ANavigationVolumeActor), 0x0000000000000015);
+				UProperty* NewProp_DrawPathColor = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DrawPathColor"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(DrawPathColor, ANavigationVolumeActor), 0x0000000000000015, Z_Construct_UScriptStruct_FColor());
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(IsUseWaypointCollisions, ANavigationVolumeActor, bool);
+				UProperty* NewProp_IsUseWaypointCollisions = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("IsUseWaypointCollisions"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(IsUseWaypointCollisions, ANavigationVolumeActor), 0x0000000000000015, CPP_BOOL_PROPERTY_BITMASK(IsUseWaypointCollisions, ANavigationVolumeActor), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(IsVisiblePaths, ANavigationVolumeActor, bool);
+				UProperty* NewProp_IsVisiblePaths = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("IsVisiblePaths"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(IsVisiblePaths, ANavigationVolumeActor), 0x0000000000000015, CPP_BOOL_PROPERTY_BITMASK(IsVisiblePaths, ANavigationVolumeActor), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(Bake, ANavigationVolumeActor, bool);
+				UProperty* NewProp_Bake = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Bake"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(Bake, ANavigationVolumeActor), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(Bake, ANavigationVolumeActor), sizeof(bool), true);
+				UProperty* NewProp_Recursion = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Recursion"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(Recursion, ANavigationVolumeActor), 0x0000000000000005);
+				UProperty* NewProp_DivideZ = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DivideZ"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(DivideZ, ANavigationVolumeActor), 0x0000000000000005);
+				UProperty* NewProp_DivideY = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DivideY"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(DivideY, ANavigationVolumeActor), 0x0000000000000005);
+				UProperty* NewProp_DivideX = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DivideX"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(DivideX, ANavigationVolumeActor), 0x0000000000000005);
+				UProperty* NewProp_WaypointPathCount = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("WaypointPathCount"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(WaypointPathCount, ANavigationVolumeActor), 0x0000000000020015);
+				UProperty* NewProp_WaypointCount = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("WaypointCount"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(WaypointCount, ANavigationVolumeActor), 0x0000000000020015);
+				UProperty* NewProp_WaypointPathList = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("WaypointPathList"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(WaypointPathList, ANavigationVolumeActor), 0x000000800002001d);
+				UProperty* NewProp_WaypointPathList_Inner = new(EC_InternalUseOnlyConstructor, NewProp_WaypointPathList, TEXT("WaypointPathList"), RF_Public|RF_Transient|RF_Native) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x00000000000a0008, Z_Construct_UClass_UWaypointPathComponent_NoRegister());
+				UProperty* NewProp_WaypointList = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("WaypointList"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(WaypointList, ANavigationVolumeActor), 0x000000800002001d);
+				UProperty* NewProp_WaypointList_Inner = new(EC_InternalUseOnlyConstructor, NewProp_WaypointList, TEXT("WaypointList"), RF_Public|RF_Transient|RF_Native) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x00000000000a0008, Z_Construct_UClass_UWaypointComponent_NoRegister());
+				UProperty* NewProp_PathFindingComponent = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PathFindingComponent"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(PathFindingComponent, ANavigationVolumeActor), 0x000000000008000c, Z_Construct_UClass_UPathFindingComponent_NoRegister());
+				UProperty* NewProp_BoxVolume = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BoxVolume"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(BoxVolume, ANavigationVolumeActor), 0x00000000000a000d, Z_Construct_UClass_UBoxComponent_NoRegister());
+PRAGMA_POP
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromActor()); // 1073356698
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromSceneComponent()); // 1248613916
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANavigationVolumeActor_DrawPathFromVector()); // 1703832475
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANavigationVolumeActor_FindPathByActors()); // 781903207
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANavigationVolumeActor_FindPathBySceneComponent()); // 285735654
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_ANavigationVolumeActor_FindPathByVectors()); // 805851884
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_MaxCaluclationTime, TEXT("Category"), TEXT("PathFinding"));
+				MetaData->SetValue(NewProp_MaxCaluclationTime, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_Thickness, TEXT("Category"), TEXT("Debug"));
+				MetaData->SetValue(NewProp_Thickness, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_DrawPathColor, TEXT("Category"), TEXT("Debug"));
+				MetaData->SetValue(NewProp_DrawPathColor, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_IsUseWaypointCollisions, TEXT("Category"), TEXT("Debug"));
+				MetaData->SetValue(NewProp_IsUseWaypointCollisions, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_IsVisiblePaths, TEXT("Category"), TEXT("Debug"));
+				MetaData->SetValue(NewProp_IsVisiblePaths, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_Bake, TEXT("Category"), TEXT("SpeceDivision"));
+				MetaData->SetValue(NewProp_Bake, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_Recursion, TEXT("Category"), TEXT("SpaceDivision"));
+				MetaData->SetValue(NewProp_Recursion, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_DivideZ, TEXT("Category"), TEXT("SpaceDivision"));
+				MetaData->SetValue(NewProp_DivideZ, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_DivideY, TEXT("Category"), TEXT("SpaceDivision"));
+				MetaData->SetValue(NewProp_DivideY, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_DivideX, TEXT("Category"), TEXT("SpaceDivision"));
+				MetaData->SetValue(NewProp_DivideX, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_WaypointPathCount, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_WaypointPathCount, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_WaypointCount, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_WaypointCount, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_WaypointPathList, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_WaypointPathList, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_WaypointPathList, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_WaypointList, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_WaypointList, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_WaypointList, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_PathFindingComponent, TEXT("Category"), TEXT("NavigationVolume"));
+				MetaData->SetValue(NewProp_PathFindingComponent, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_PathFindingComponent, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+				MetaData->SetValue(NewProp_BoxVolume, TEXT("Category"), TEXT("NavigationVolume"));
+				MetaData->SetValue(NewProp_BoxVolume, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_BoxVolume, TEXT("ModuleRelativePath"), TEXT("AI/NavigationVolumeActor.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ANavigationVolumeActor(Z_Construct_UClass_ANavigationVolumeActor, TEXT("ANavigationVolumeActor"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ANavigationVolumeActor);
+	UScriptStruct* Z_Construct_UScriptStruct_FPathFindingInformation()
+	{
+		UPackage* Outer=Z_Construct_UPackage_Game();
+		static UScriptStruct* ReturnStruct = NULL;
+		if (!ReturnStruct)
+		{
+			ReturnStruct = new(EC_InternalUseOnlyConstructor, Outer, TEXT("PathFindingInformation"), RF_Public|RF_Transient|RF_Native) UScriptStruct(FObjectInitializer(), NULL, new UScriptStruct::TCppStructOps<FPathFindingInformation>, EStructFlags(0x00000005));
+			UProperty* NewProp_MaxCaluclationTime = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("MaxCaluclationTime"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(MaxCaluclationTime, FPathFindingInformation), 0x0000000000020015);
+			UProperty* NewProp_EndLocation = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("EndLocation"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(EndLocation, FPathFindingInformation), 0x0000000000020015, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_StartLocation = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("StartLocation"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(StartLocation, FPathFindingInformation), 0x0000000000020015, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_EndNode = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("EndNode"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(EndNode, FPathFindingInformation), 0x00000000000a001d, Z_Construct_UClass_UWaypointComponent_NoRegister());
+			UProperty* NewProp_StartNode = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("StartNode"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(StartNode, FPathFindingInformation), 0x00000000000a001d, Z_Construct_UClass_UWaypointComponent_NoRegister());
+			UProperty* NewProp_CloseList = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("CloseList"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(CloseList, FPathFindingInformation), 0x000000800002001d);
+			UProperty* NewProp_CloseList_Inner = new(EC_InternalUseOnlyConstructor, NewProp_CloseList, TEXT("CloseList"), RF_Public|RF_Transient|RF_Native) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x00000000000a0008, Z_Construct_UClass_UWaypointComponent_NoRegister());
+			UProperty* NewProp_OpenList = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("OpenList"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(OpenList, FPathFindingInformation), 0x000000800002001d);
+			UProperty* NewProp_OpenList_Inner = new(EC_InternalUseOnlyConstructor, NewProp_OpenList, TEXT("OpenList"), RF_Public|RF_Transient|RF_Native) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x00000000000a0008, Z_Construct_UClass_UWaypointComponent_NoRegister());
+			UProperty* NewProp_WaypointList = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("WaypointList"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(WaypointList, FPathFindingInformation), 0x000000800002001d);
+			UProperty* NewProp_WaypointList_Inner = new(EC_InternalUseOnlyConstructor, NewProp_WaypointList, TEXT("WaypointList"), RF_Public|RF_Transient|RF_Native) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x00000000000a0008, Z_Construct_UClass_UWaypointComponent_NoRegister());
+			UProperty* NewProp_Timer = new(EC_InternalUseOnlyConstructor, ReturnStruct, TEXT("Timer"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(Timer, FPathFindingInformation), 0x00000000000a001d, Z_Construct_UClass_UTimeCounterComponent_NoRegister());
+			ReturnStruct->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnStruct->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnStruct, TEXT("BlueprintType"), TEXT("true"));
+			MetaData->SetValue(NewProp_MaxCaluclationTime, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_MaxCaluclationTime, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_EndLocation, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_EndLocation, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_StartLocation, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_StartLocation, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_EndNode, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_EndNode, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_EndNode, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_StartNode, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_StartNode, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_StartNode, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_CloseList, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_CloseList, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_CloseList, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_OpenList, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_OpenList, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_OpenList, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_WaypointList, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_WaypointList, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_WaypointList, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+			MetaData->SetValue(NewProp_Timer, TEXT("Category"), TEXT("PathFindingInformation"));
+			MetaData->SetValue(NewProp_Timer, TEXT("EditInline"), TEXT("true"));
+			MetaData->SetValue(NewProp_Timer, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+#endif
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FPathFindingInformation_CRC() { return 1764732422U; }
+	UFunction* Z_Construct_UFunction_UPathFindingComponent_DrawPath()
+	{
+		struct PathFindingComponent_eventDrawPath_Parms
+		{
+			FVector start;
+			TArray<FVector> route;
+			FColor color;
+			float duration;
+			float thickness;
+		};
+		UObject* Outer=Z_Construct_UClass_UPathFindingComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("DrawPath"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04C20401, 65535, sizeof(PathFindingComponent_eventDrawPath_Parms));
+			UProperty* NewProp_thickness = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("thickness"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(thickness, PathFindingComponent_eventDrawPath_Parms), 0x0000000000000080);
+			UProperty* NewProp_duration = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("duration"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(duration, PathFindingComponent_eventDrawPath_Parms), 0x0000000000000080);
+			UProperty* NewProp_color = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("color"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(color, PathFindingComponent_eventDrawPath_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FColor());
+			UProperty* NewProp_route = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("route"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(route, PathFindingComponent_eventDrawPath_Parms), 0x0000000000000180);
+			UProperty* NewProp_route_Inner = new(EC_InternalUseOnlyConstructor, NewProp_route, TEXT("route"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(start, PathFindingComponent_eventDrawPath_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FVector());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_color"), TEXT("(R=0,G=255,B=0,A=255)"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_duration"), TEXT("0.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_thickness"), TEXT("1.000000"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UPathFindingComponent_FindPath()
+	{
+		struct PathFindingComponent_eventFindPath_Parms
+		{
+			APawn* findPawn;
+			TArray<FVector> resultRoute;
+			FVector start;
+			FVector end;
+			TEnumAsByte<EPathFindingResultState> ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_UPathFindingComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("FindPath"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04C20401, 65535, sizeof(PathFindingComponent_eventFindPath_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UByteProperty(CPP_PROPERTY_BASE(ReturnValue, PathFindingComponent_eventFindPath_Parms), 0x0000000000000580, Z_Construct_UEnum_Game_EPathFindingResultState());
+			UProperty* NewProp_end = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("end"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(end, PathFindingComponent_eventFindPath_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_start = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("start"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(start, PathFindingComponent_eventFindPath_Parms), 0x0000000000000080, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_resultRoute = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(resultRoute, PathFindingComponent_eventFindPath_Parms), 0x0000000000000180);
+			UProperty* NewProp_resultRoute_Inner = new(EC_InternalUseOnlyConstructor, NewProp_resultRoute, TEXT("resultRoute"), RF_Public|RF_Transient|RF_Native) UStructProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UScriptStruct_FVector());
+			UProperty* NewProp_findPawn = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("findPawn"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(findPawn, PathFindingComponent_eventFindPath_Parms), 0x0000000000000080, Z_Construct_UClass_APawn_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("PathFinding"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_UPathFindingComponent_NoRegister()
+	{
+		return UPathFindingComponent::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UPathFindingComponent()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UActorComponent();
+			Z_Construct_UPackage_Game();
+			OuterClass = UPathFindingComponent::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20B00080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_UPathFindingComponent_DrawPath());
+				OuterClass->LinkChild(Z_Construct_UFunction_UPathFindingComponent_FindPath());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_PathFindInfo = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PathFindInfo"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(PathFindInfo, UPathFindingComponent), 0x0000008000020015, Z_Construct_UScriptStruct_FPathFindingInformation());
+PRAGMA_POP
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UPathFindingComponent_DrawPath()); // 2960690919
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UPathFindingComponent_FindPath()); // 1194030134
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("BlueprintSpawnableComponent"), TEXT(""));
+				MetaData->SetValue(OuterClass, TEXT("ClassGroupNames"), TEXT("Custom"));
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("ComponentReplication"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/PathFindingComponent.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+				MetaData->SetValue(NewProp_PathFindInfo, TEXT("Category"), TEXT("PathFindingComponent"));
+				MetaData->SetValue(NewProp_PathFindInfo, TEXT("ModuleRelativePath"), TEXT("AI/PathFindingComponent.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UPathFindingComponent(Z_Construct_UClass_UPathFindingComponent, TEXT("UPathFindingComponent"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UPathFindingComponent);
+	UFunction* Z_Construct_UFunction_UTimeCounterComponent_Display()
+	{
+		struct TimeCounterComponent_eventDisplay_Parms
+		{
+			int32 index;
+		};
+		UObject* Outer=Z_Construct_UClass_UTimeCounterComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("Display"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(TimeCounterComponent_eventDisplay_Parms));
+			UProperty* NewProp_index = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("index"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(index, TimeCounterComponent_eventDisplay_Parms), 0x0000000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("TimeCounter"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TimeCounterComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UTimeCounterComponent_End()
+	{
+		struct TimeCounterComponent_eventEnd_Parms
+		{
+			int32 index;
+		};
+		UObject* Outer=Z_Construct_UClass_UTimeCounterComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("End"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(TimeCounterComponent_eventEnd_Parms));
+			UProperty* NewProp_index = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("index"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(index, TimeCounterComponent_eventEnd_Parms), 0x0000000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("TimeCounter"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TimeCounterComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UTimeCounterComponent_GetElapsedTimeFromStart()
+	{
+		struct TimeCounterComponent_eventGetElapsedTimeFromStart_Parms
+		{
+			int32 index;
+			int32 ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_UTimeCounterComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetElapsedTimeFromStart"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(TimeCounterComponent_eventGetElapsedTimeFromStart_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(ReturnValue, TimeCounterComponent_eventGetElapsedTimeFromStart_Parms), 0x0000000000000580);
+			UProperty* NewProp_index = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("index"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(index, TimeCounterComponent_eventGetElapsedTimeFromStart_Parms), 0x0000000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("TimeCounter"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TimeCounterComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UTimeCounterComponent_Start()
+	{
+		struct TimeCounterComponent_eventStart_Parms
+		{
+			int32 index;
+		};
+		UObject* Outer=Z_Construct_UClass_UTimeCounterComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("Start"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(TimeCounterComponent_eventStart_Parms));
+			UProperty* NewProp_index = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("index"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(index, TimeCounterComponent_eventStart_Parms), 0x0000000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("TimeCounter"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("TimeCounterComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_UTimeCounterComponent_NoRegister()
+	{
+		return UTimeCounterComponent::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UTimeCounterComponent()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UActorComponent();
+			Z_Construct_UPackage_Game();
+			OuterClass = UTimeCounterComponent::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20B00080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_UTimeCounterComponent_Display());
+				OuterClass->LinkChild(Z_Construct_UFunction_UTimeCounterComponent_End());
+				OuterClass->LinkChild(Z_Construct_UFunction_UTimeCounterComponent_GetElapsedTimeFromStart());
+				OuterClass->LinkChild(Z_Construct_UFunction_UTimeCounterComponent_Start());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_CounterCount = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("CounterCount"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(CounterCount, UTimeCounterComponent), 0x0000000000000005);
+PRAGMA_POP
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UTimeCounterComponent_Display()); // 1950128599
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UTimeCounterComponent_End()); // 3378866047
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UTimeCounterComponent_GetElapsedTimeFromStart()); // 453832240
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UTimeCounterComponent_Start()); // 240649904
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("BlueprintSpawnableComponent"), TEXT(""));
+				MetaData->SetValue(OuterClass, TEXT("ClassGroupNames"), TEXT("Custom"));
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("ComponentReplication"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TimeCounterComponent.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("TimeCounterComponent.h"));
+				MetaData->SetValue(NewProp_CounterCount, TEXT("Category"), TEXT("TimeCounter"));
+				MetaData->SetValue(NewProp_CounterCount, TEXT("ModuleRelativePath"), TEXT("TimeCounterComponent.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UTimeCounterComponent(Z_Construct_UClass_UTimeCounterComponent, TEXT("UTimeCounterComponent"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UTimeCounterComponent);
+	UEnum* Z_Construct_UEnum_Game_EState()
+	{
+		UPackage* Outer=Z_Construct_UPackage_Game();
+		static UEnum* ReturnEnum = NULL;
+		if (!ReturnEnum)
+		{
+			ReturnEnum = new(EC_InternalUseOnlyConstructor, Outer, TEXT("EState"), RF_Public|RF_Transient|RF_Native) UEnum(FObjectInitializer());
+			TArray<FName> EnumNames;
+			EnumNames.Add(FName(TEXT("EState::None")));
+			EnumNames.Add(FName(TEXT("EState::Open")));
+			EnumNames.Add(FName(TEXT("EState::Closed")));
+			EnumNames.Add(FName(TEXT("EState::EState_MAX")));
+			ReturnEnum->SetEnums(EnumNames, UEnum::ECppForm::EnumClass);
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnEnum->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnEnum, TEXT("BlueprintType"), TEXT("true"));
+			MetaData->SetValue(ReturnEnum, TEXT("Closed.DisplayName"), TEXT("Closed"));
+			MetaData->SetValue(ReturnEnum, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+			MetaData->SetValue(ReturnEnum, TEXT("None.DisplayName"), TEXT("None"));
+			MetaData->SetValue(ReturnEnum, TEXT("Open.DisplayName"), TEXT("Open"));
+#endif
+		}
+		return ReturnEnum;
+	}
+	UFunction* Z_Construct_UFunction_UWaypointComponent_GetChildBoxCollision()
+	{
+		struct WaypointComponent_eventGetChildBoxCollision_Parms
+		{
+			UBoxComponent* ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_UWaypointComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetChildBoxCollision"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(WaypointComponent_eventGetChildBoxCollision_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(ReturnValue, WaypointComponent_eventGetChildBoxCollision_Parms), 0x0000000000080588, Z_Construct_UClass_UBoxComponent_NoRegister());
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Waypoint"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+			MetaData->SetValue(NewProp_ReturnValue, TEXT("EditInline"), TEXT("true"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UWaypointComponent_HasChildBoxCollision()
+	{
+		struct WaypointComponent_eventHasChildBoxCollision_Parms
+		{
+			bool ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_UWaypointComponent();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("HasChildBoxCollision"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(WaypointComponent_eventHasChildBoxCollision_Parms));
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(ReturnValue, WaypointComponent_eventHasChildBoxCollision_Parms, bool);
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(ReturnValue, WaypointComponent_eventHasChildBoxCollision_Parms), 0x0000000000000580, CPP_BOOL_PROPERTY_BITMASK(ReturnValue, WaypointComponent_eventHasChildBoxCollision_Parms), sizeof(bool), true);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Waypoint"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_UWaypointComponent_NoRegister()
+	{
+		return UWaypointComponent::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UWaypointComponent()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_USceneComponent();
+			Z_Construct_UPackage_Game();
+			OuterClass = UWaypointComponent::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20B00080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_UWaypointComponent_GetChildBoxCollision());
+				OuterClass->LinkChild(Z_Construct_UFunction_UWaypointComponent_HasChildBoxCollision());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_ParentWaypoint = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("ParentWaypoint"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(ParentWaypoint, UWaypointComponent), 0x00000000000a000d, Z_Construct_UClass_UWaypointComponent_NoRegister());
+				UProperty* NewProp_NeighborWaypoints = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("NeighborWaypoints"), RF_Public|RF_Transient|RF_Native) UArrayProperty(CPP_PROPERTY_BASE(NeighborWaypoints, UWaypointComponent), 0x000000800002000d);
+				UProperty* NewProp_NeighborWaypoints_Inner = new(EC_InternalUseOnlyConstructor, NewProp_NeighborWaypoints, TEXT("NeighborWaypoints"), RF_Public|RF_Transient|RF_Native) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x00000000000a0008, Z_Construct_UClass_UWaypointComponent_NoRegister());
+				UProperty* NewProp_Cost = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Cost"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(Cost, UWaypointComponent), 0x0000000000020005);
+				UProperty* NewProp_State = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("State"), RF_Public|RF_Transient|RF_Native) UByteProperty(CPP_PROPERTY_BASE(State, UWaypointComponent), 0x0000000000020005, Z_Construct_UEnum_Game_EState());
+				UProperty* NewProp_ID = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("ID"), RF_Public|RF_Transient|RF_Native) UIntProperty(CPP_PROPERTY_BASE(ID, UWaypointComponent), 0x0000000000020015);
+PRAGMA_POP
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UWaypointComponent_GetChildBoxCollision()); // 1251330005
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UWaypointComponent_HasChildBoxCollision()); // 624852069
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("BlueprintSpawnableComponent"), TEXT(""));
+				MetaData->SetValue(OuterClass, TEXT("ClassGroupNames"), TEXT("Custom"));
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Trigger PhysicsVolume ComponentReplication"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/WaypointComponent.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+				MetaData->SetValue(NewProp_ParentWaypoint, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_ParentWaypoint, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_ParentWaypoint, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+				MetaData->SetValue(NewProp_NeighborWaypoints, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_NeighborWaypoints, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_NeighborWaypoints, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+				MetaData->SetValue(NewProp_Cost, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_Cost, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+				MetaData->SetValue(NewProp_State, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_State, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+				MetaData->SetValue(NewProp_ID, TEXT("Category"), TEXT("Waypoint"));
+				MetaData->SetValue(NewProp_ID, TEXT("ModuleRelativePath"), TEXT("AI/WaypointComponent.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UWaypointComponent(Z_Construct_UClass_UWaypointComponent, TEXT("UWaypointComponent"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UWaypointComponent);
+	UClass* Z_Construct_UClass_UWaypointPathComponent_NoRegister()
+	{
+		return UWaypointPathComponent::StaticClass();
+	}
+	UClass* Z_Construct_UClass_UWaypointPathComponent()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UActorComponent();
+			Z_Construct_UPackage_Game();
+			OuterClass = UWaypointPathComponent::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20B00080;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_Thickness = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Thickness"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(Thickness, UWaypointPathComponent), 0x0000000000020015);
+				UProperty* NewProp_DrawPathColor = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DrawPathColor"), RF_Public|RF_Transient|RF_Native) UStructProperty(CPP_PROPERTY_BASE(DrawPathColor, UWaypointPathComponent), 0x0000000000020015, Z_Construct_UScriptStruct_FColor());
+				UProperty* NewProp_Waypoint2 = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Waypoint2"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(Waypoint2, UWaypointPathComponent), 0x00000000000a001d, Z_Construct_UClass_UWaypointComponent_NoRegister());
+				UProperty* NewProp_Waypoint1 = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Waypoint1"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(Waypoint1, UWaypointPathComponent), 0x00000000000a001d, Z_Construct_UClass_UWaypointComponent_NoRegister());
+PRAGMA_POP
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("BlueprintSpawnableComponent"), TEXT(""));
+				MetaData->SetValue(OuterClass, TEXT("ClassGroupNames"), TEXT("Custom"));
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("ComponentReplication"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("AI/WaypointPathComponent.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("AI/WaypointPathComponent.h"));
+				MetaData->SetValue(NewProp_Thickness, TEXT("Category"), TEXT("NavigationPath"));
+				MetaData->SetValue(NewProp_Thickness, TEXT("ModuleRelativePath"), TEXT("AI/WaypointPathComponent.h"));
+				MetaData->SetValue(NewProp_DrawPathColor, TEXT("Category"), TEXT("NavigationPath"));
+				MetaData->SetValue(NewProp_DrawPathColor, TEXT("ModuleRelativePath"), TEXT("AI/WaypointPathComponent.h"));
+				MetaData->SetValue(NewProp_Waypoint2, TEXT("Category"), TEXT("NavigationPath"));
+				MetaData->SetValue(NewProp_Waypoint2, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_Waypoint2, TEXT("ModuleRelativePath"), TEXT("AI/WaypointPathComponent.h"));
+				MetaData->SetValue(NewProp_Waypoint1, TEXT("Category"), TEXT("NavigationPath"));
+				MetaData->SetValue(NewProp_Waypoint1, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_Waypoint1, TEXT("ModuleRelativePath"), TEXT("AI/WaypointPathComponent.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UWaypointPathComponent(Z_Construct_UClass_UWaypointPathComponent, TEXT("UWaypointPathComponent"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UWaypointPathComponent);
 	UClass* Z_Construct_UClass_UWiiComponent_NoRegister()
 	{
 		return UWiiComponent::StaticClass();
@@ -117,8 +1337,8 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Game")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x353AE159;
-			Guid.B = 0x48964CE2;
+			Guid.A = 0x128E86BB;
+			Guid.B = 0x8A49CDDA;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
