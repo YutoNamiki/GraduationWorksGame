@@ -1,685 +1,682 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <None Include="..\..\Game.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{112EE248-928C-4D55-B699-6EEA4B3A454E}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Game.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\GameEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{7D56E636-1521-4711-BD4A-E681616700D1}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGame.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultInput.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Plugins">
-      <UniqueIdentifier>{972B842C-BE65-4AC4-8AD6-E31E2FC4A0E4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\MyoPlugin">
-      <UniqueIdentifier>{7AC95922-F9F6-4DAF-98F1-6D54FF821D4E}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\MyoPlugin\Source">
-      <UniqueIdentifier>{0FD913DE-E3BD-4787-964B-EC619B7780E9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\MyoPlugin\Source\MyoPlugin">
-      <UniqueIdentifier>{9DC7767B-91DC-462D-966C-B49B92017EE8}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\MyoPlugin.Build.cs">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin</Filter>
-    </None>
-    <Filter Include="Plugins\MyoPlugin\Source\MyoPlugin\Private">
-      <UniqueIdentifier>{9D80E2A9-02A7-4313-A26A-823C7022096D}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\FMyoPlugin.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\FMyoPlugin.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoComponent.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoController.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoDelegate.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoDelegateBlueprint.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoHubWorker.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoHubWorker.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoInterface.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoPlayerController.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoPluginActor.cpp">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoPluginPrivatePCH.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
-    </ClInclude>
-    <Filter Include="Plugins\MyoPlugin\Source\MyoPlugin\Public">
-      <UniqueIdentifier>{80B86648-8DC5-4444-8086-FEE6ED4C16B8}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\IMyoPlugin.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoComponent.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoController.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoDelegate.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoDelegateBlueprint.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoInterface.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoPlayerController.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoPluginActor.h">
-      <Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
-    </ClInclude>
-    <None Include="..\..\Plugins\MyoPlugin\MyoPlugin.uplugin">
-      <Filter>Plugins\MyoPlugin</Filter>
-    </None>
-    <Filter Include="Plugins\MyoPlugin\Resources">
-      <UniqueIdentifier>{6F3B6707-4830-457E-9BBD-A80EFD964BCA}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\MyoPlugin\Resources\Icon128.png">
-      <Filter>Plugins\MyoPlugin\Resources</Filter>
-    </None>
-    <Filter Include="Source\Game">
-      <UniqueIdentifier>{EDCA9D7A-FEF4-4801-9D2A-EDCA36BE072B}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Game\Game.Build.cs">
-      <Filter>Source\Game</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\Game\Game.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Game\Game.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Chat">
-      <UniqueIdentifier>{8A428AA6-D769-419A-8CAC-A407F06C1DA4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Game\Chat\inc">
-      <UniqueIdentifier>{864E454B-71EC-49A5-923C-424E9B4152C2}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\AuthenticationValues.h">
-      <Filter>Source\Game\Chat\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Channel.h">
-      <Filter>Source\Game\Chat\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Client.h">
-      <Filter>Source\Game\Chat\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Listener.h">
-      <Filter>Source\Game\Chat\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Peer.h">
-      <Filter>Source\Game\Chat\inc</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Chat\inc\Enums">
-      <UniqueIdentifier>{5A831E41-2ECF-49D7-A3D6-22BE5FEA8A2F}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\ClientState.h">
-      <Filter>Source\Game\Chat\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\CustomAuthenticationType.h">
-      <Filter>Source\Game\Chat\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\DisconnectCause.h">
-      <Filter>Source\Game\Chat\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\ErrorCode.h">
-      <Filter>Source\Game\Chat\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Enums\UserStatus.h">
-      <Filter>Source\Game\Chat\inc\Enums</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Chat\inc\Internal">
-      <UniqueIdentifier>{4120D9CA-BABA-48F8-8814-C186A25E255D}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\AuthenticationValuesSecretSetter.h">
-      <Filter>Source\Game\Chat\inc\Internal</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Chat\inc\Internal\Enums">
-      <UniqueIdentifier>{939952E0-ECEE-42E1-93AF-CDA1952B0356}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\EventCode.h">
-      <Filter>Source\Game\Chat\inc\Internal\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\OperationCode.h">
-      <Filter>Source\Game\Chat\inc\Internal\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\ParameterCode.h">
-      <Filter>Source\Game\Chat\inc\Internal\Enums</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Chat\lib">
-      <UniqueIdentifier>{83A6A360-7FA5-403B-B6A5-F57E701FBFB5}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_debug_windows_md_x64.lib">
-      <Filter>Source\Game\Chat\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Chat\lib\chat-cpp_vc12_debug_windows_md_x64.pdb">
-      <Filter>Source\Game\Chat\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_debug_windows_mt_x64.lib">
-      <Filter>Source\Game\Chat\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Chat\lib\chat-cpp_vc12_debug_windows_mt_x64.pdb">
-      <Filter>Source\Game\Chat\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_release_windows_md_x64.lib">
-      <Filter>Source\Game\Chat\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_release_windows_mt_x64.lib">
-      <Filter>Source\Game\Chat\lib</Filter>
-    </None>
-    <Filter Include="Source\Game\Common">
-      <UniqueIdentifier>{37E9E994-28E9-4E53-97FE-41A0E0E7021E}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Game\Common\inc">
-      <UniqueIdentifier>{1AB5138D-665C-4202-B451-98ED9291C2B8}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Common\inc\ANSIString.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Base.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\BaseCharString.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\BaseListener.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Common.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\CustomType.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\CustomTypeBase.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\CustomTypeFactory.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\defines.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\DeSerializer.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Dictionary.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\DictionaryBase.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\EGTime.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Hashtable.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\JString.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\JVector.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\KeyObject.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Logger.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Object.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\platformLayer.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\platform_definition.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\porting.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Serializer.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\ToString.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\UTF8String.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\ValueObject.h">
-      <Filter>Source\Game\Common\inc</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Common\inc\Enums">
-      <UniqueIdentifier>{43AE1F37-8890-4B51-B83B-81A0596E0890}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Enums\DebugLevel.h">
-      <Filter>Source\Game\Common\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Enums\TypeCode.h">
-      <Filter>Source\Game\Common\inc\Enums</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Common\inc\Helpers">
-      <UniqueIdentifier>{FBFF946E-66D1-4264-85A8-CE9A9DE9D56B}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ArrayLengthType.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\CompileTimeAssertTrue.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ConfirmAllowed.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ConfirmAllowedKey.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\CustomTypeCallbackWrapper.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\Data.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\debug_assert.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\DeSerializerImplementation.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EnableIf.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EndianCorrectCast.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EndianCorrectCastImplementation.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\IsDerivedFrom.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\IsPrimitiveType.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\KeyToObject.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\MathHelper.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ObjectToStringConverter.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\PrimitiveToStringConverter.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\RemoveConst.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\RemovePointer.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\SerializerImplementation.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\Thread.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ToStringImplementation.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\TypeName.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ValueToObject.h">
-      <Filter>Source\Game\Common\inc\Helpers</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Common\inc\MemoryManagement">
-      <UniqueIdentifier>{90B15A87-763D-42C6-B99B-9F8BD9FFCFBD}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Allocate.h">
-      <Filter>Source\Game\Common\inc\MemoryManagement</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Common\inc\MemoryManagement\Internal">
-      <UniqueIdentifier>{7DDF1411-8EA8-4285-8DDD-766F0F38D2CE}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\Entry.h">
-      <Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\Interface.h">
-      <Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\MemoryPool.h">
-      <Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\MemoryPoolManager.h">
-      <Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\RawStorage.h">
-      <Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Common\lib">
-      <UniqueIdentifier>{18B5B90E-3FC9-4D85-8BA2-0782D272FF38}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_debug_windows_md_x64.lib">
-      <Filter>Source\Game\Common\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Common\lib\common-cpp_vc12_debug_windows_md_x64.pdb">
-      <Filter>Source\Game\Common\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_debug_windows_mt_x64.lib">
-      <Filter>Source\Game\Common\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Common\lib\common-cpp_vc12_debug_windows_mt_x64.pdb">
-      <Filter>Source\Game\Common\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_release_windows_md_x64.lib">
-      <Filter>Source\Game\Common\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_release_windows_mt_x64.lib">
-      <Filter>Source\Game\Common\lib</Filter>
-    </None>
-    <Filter Include="Source\Game\LoadBalancing">
-      <UniqueIdentifier>{025D215C-E94D-485B-90CC-FDF71B11925E}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Game\LoadBalancing\inc">
-      <UniqueIdentifier>{EF8E3C62-1D1A-411A-A192-27E981ED6663}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\AuthenticationValues.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Client.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\FriendInfo.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Listener.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\LobbyStatsRequest.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\LobbyStatsResponse.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\MutablePlayer.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\MutableRoom.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Peer.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Player.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Room.h">
-      <Filter>Source\Game\LoadBalancing\inc</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\LoadBalancing\inc\Enums">
-      <UniqueIdentifier>{5604FA6A-71B1-40A8-B0A3-82093982D782}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\CustomAuthenticationType.h">
-      <Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\DisconnectCause.h">
-      <Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\ErrorCode.h">
-      <Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\LobbyType.h">
-      <Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\MatchmakingMode.h">
-      <Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\PeerStates.h">
-      <Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\ServerType.h">
-      <Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\LoadBalancing\inc\Internal">
-      <UniqueIdentifier>{7FF88284-A79A-4344-A176-386DFB124DF4}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\AuthenticationValuesSecretSetter.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\MutablePlayerFactory.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\MutableRoomFactory.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerFactory.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerMovementInformant.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerPropertiesCacher.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerPropertiesUpdateInformant.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\RoomFactory.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\RoomPropertiesCacher.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Utils.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\LoadBalancing\inc\Internal\Enums">
-      <UniqueIdentifier>{9DCE7CA6-B73E-4FEA-8C91-E0EDBAD49E67}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\EventCode.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\JoinType.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\OperationCode.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\ParameterCode.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\LoadBalancing\inc\Internal\Enums\Properties">
-      <UniqueIdentifier>{642FEC0A-A0C2-4254-A3B9-643058914086}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\Properties\Player.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal\Enums\Properties</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\Properties\Room.h">
-      <Filter>Source\Game\LoadBalancing\inc\Internal\Enums\Properties</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\LoadBalancing\lib">
-      <UniqueIdentifier>{07650E96-77BC-4490-BCCA-C85AE4131F14}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_debug_windows_md_x64.lib">
-      <Filter>Source\Game\LoadBalancing\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\LoadBalancing\lib\loadbalancing-cpp_vc12_debug_windows_md_x64.pdb">
-      <Filter>Source\Game\LoadBalancing\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_debug_windows_mt_x64.lib">
-      <Filter>Source\Game\LoadBalancing\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\LoadBalancing\lib\loadbalancing-cpp_vc12_debug_windows_mt_x64.pdb">
-      <Filter>Source\Game\LoadBalancing\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_release_windows_md_x64.lib">
-      <Filter>Source\Game\LoadBalancing\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_release_windows_mt_x64.lib">
-      <Filter>Source\Game\LoadBalancing\lib</Filter>
-    </None>
-    <Filter Include="Source\Game\Photon">
-      <UniqueIdentifier>{76BEF5EB-9212-44C0-839F-6799E57E47F2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Game\Photon\inc">
-      <UniqueIdentifier>{23D897DC-6583-45C9-83E5-28090B31099E}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\EventData.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\LitePeer.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\OperationRequest.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\OperationResponse.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\PhotonListener.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\PhotonPeer.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\TrafficStats.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\TrafficStatsGameLevel.h">
-      <Filter>Source\Game\Photon\inc</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Photon\inc\Enums">
-      <UniqueIdentifier>{120C4D7C-0B23-4AFF-A0FB-6D2543218E7A}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ConnectionProtocol.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ErrorCode.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventCache.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventCode.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventKey.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\NetworkPort.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\OperationCode.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ParameterCode.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\PeerState.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ReceiverGroup.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\Photon\inc\Enums\StatusCode.h">
-      <Filter>Source\Game\Photon\inc\Enums</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\Photon\lib">
-      <UniqueIdentifier>{5938922C-20D2-4540-99BD-B6A62F236ED8}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_debug_windows_md_x64.lib">
-      <Filter>Source\Game\Photon\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_md_x64.pdb">
-      <Filter>Source\Game\Photon\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_debug_windows_mt_x64.lib">
-      <Filter>Source\Game\Photon\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_mt_x64.pdb">
-      <Filter>Source\Game\Photon\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_md_x64.lib">
-      <Filter>Source\Game\Photon\lib</Filter>
-    </None>
-    <None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_mt_x64.lib">
-      <Filter>Source\Game\Photon\lib</Filter>
-    </None>
-    <Filter Include="Source\Game\WiiYourself">
-      <UniqueIdentifier>{8693C75F-9F55-4065-94B5-830389CC09DE}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Game\WiiYourself\inc">
-      <UniqueIdentifier>{BA98553C-6731-4D98-8443-AE6C0608B4F7}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote.h">
-      <Filter>Source\Game\WiiYourself\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_common.h">
-      <Filter>Source\Game\WiiYourself\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_state.h">
-      <Filter>Source\Game\WiiYourself\inc</Filter>
-    </ClInclude>
-    <Filter Include="Source\Game\WiiYourself\lib">
-      <UniqueIdentifier>{167BBAA5-0191-42BB-8928-9939F9E67E50}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\Game\WiiYourself\lib\WiiYourself!_v2_0.lib">
-      <Filter>Source\Game\WiiYourself\lib</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Game\WiiComponent.cpp">
-      <Filter>Source\Game</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Game\WiiComponent.h">
-      <Filter>Source\Game</Filter>
-    </ClInclude>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\Game.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{A8576BE6-EAF3-44E1-A338-107BCBD971AA}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Game.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\GameEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{9AA68D16-62EC-4F4A-9E75-6AF3B7D47B7F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Plugins">
+			<UniqueIdentifier>{774D01F2-19E6-4267-9875-2C42A8B7C645}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\MyoPlugin">
+			<UniqueIdentifier>{6AB2BF50-6AFA-4319-BA68-C0A2AAA8763C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\MyoPlugin\Source">
+			<UniqueIdentifier>{5E9B09C6-02B6-4004-8A8D-AE1B8C25E8F4}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\MyoPlugin\Source\MyoPlugin">
+			<UniqueIdentifier>{B4F2DFF9-CD8D-4DA1-A00C-640EA2A53E19}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\MyoPlugin.Build.cs">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\MyoPlugin\Source\MyoPlugin\Private">
+			<UniqueIdentifier>{7B6CBFA8-BB98-4BAC-8ADD-F0299FD07C01}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\FMyoPlugin.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\FMyoPlugin.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoComponent.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoController.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoDelegate.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoDelegateBlueprint.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoHubWorker.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoHubWorker.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoInterface.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoPlayerController.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoPluginActor.cpp">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Private\MyoPluginPrivatePCH.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Private</Filter>
+		</ClInclude >
+		<Filter Include="Plugins\MyoPlugin\Source\MyoPlugin\Public">
+			<UniqueIdentifier>{9C6E484F-5D73-445F-8200-A968A71F229E}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\IMyoPlugin.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoComponent.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoController.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoDelegate.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoDelegateBlueprint.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoInterface.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoPlayerController.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\MyoPlugin\Source\MyoPlugin\Public\MyoPluginActor.h">
+			<Filter>Plugins\MyoPlugin\Source\MyoPlugin\Public</Filter>
+		</ClInclude >
+		<None Include="..\..\Plugins\MyoPlugin\MyoPlugin.uplugin">
+			<Filter>Plugins\MyoPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\MyoPlugin\Resources">
+			<UniqueIdentifier>{407A0FB0-5342-4234-BE77-969FEF3DE02F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\MyoPlugin\Resources\Icon128.png">
+			<Filter>Plugins\MyoPlugin\Resources</Filter>
+		</None >
+		<Filter Include="Source\Game">
+			<UniqueIdentifier>{460BD7B0-47B3-4FF6-9112-A8ED469771CD}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Game\Game.Build.cs">
+			<Filter>Source\Game</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Game\Game.cpp">
+			<Filter>Source\Game</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Game\Game.h">
+			<Filter>Source\Game</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Game\WiiComponent.cpp">
+			<Filter>Source\Game</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Game\WiiComponent.h">
+			<Filter>Source\Game</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Chat">
+			<UniqueIdentifier>{46900FB6-DA2B-4BEB-A6CE-668AFF93A13F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\Game\Chat\inc">
+			<UniqueIdentifier>{784EDC8A-9CE4-4A5A-8C6E-2006F4448837}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Chat\inc\AuthenticationValues.h">
+			<Filter>Source\Game\Chat\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Channel.h">
+			<Filter>Source\Game\Chat\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Client.h">
+			<Filter>Source\Game\Chat\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Listener.h">
+			<Filter>Source\Game\Chat\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Peer.h">
+			<Filter>Source\Game\Chat\inc</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Chat\inc\Enums">
+			<UniqueIdentifier>{28AE683E-FDB3-46A8-8861-1E7E0DC6A4A3}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Enums\ClientState.h">
+			<Filter>Source\Game\Chat\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Enums\CustomAuthenticationType.h">
+			<Filter>Source\Game\Chat\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Enums\DisconnectCause.h">
+			<Filter>Source\Game\Chat\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Enums\ErrorCode.h">
+			<Filter>Source\Game\Chat\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Enums\UserStatus.h">
+			<Filter>Source\Game\Chat\inc\Enums</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Chat\inc\Internal">
+			<UniqueIdentifier>{206B50F9-4657-4100-BCEC-D77DB4F38355}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Internal\AuthenticationValuesSecretSetter.h">
+			<Filter>Source\Game\Chat\inc\Internal</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Chat\inc\Internal\Enums">
+			<UniqueIdentifier>{E91421BE-C028-42FC-8E59-BE5BE6A4AEC4}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\EventCode.h">
+			<Filter>Source\Game\Chat\inc\Internal\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\OperationCode.h">
+			<Filter>Source\Game\Chat\inc\Internal\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Chat\inc\Internal\Enums\ParameterCode.h">
+			<Filter>Source\Game\Chat\inc\Internal\Enums</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Chat\lib">
+			<UniqueIdentifier>{41D5098B-519D-41B9-9D24-965F7A6B1A2F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_debug_windows_md_x64.lib">
+			<Filter>Source\Game\Chat\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Chat\lib\chat-cpp_vc12_debug_windows_md_x64.pdb">
+			<Filter>Source\Game\Chat\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_debug_windows_mt_x64.lib">
+			<Filter>Source\Game\Chat\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Chat\lib\chat-cpp_vc12_debug_windows_mt_x64.pdb">
+			<Filter>Source\Game\Chat\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_release_windows_md_x64.lib">
+			<Filter>Source\Game\Chat\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Chat\lib\Chat-cpp_vc12_release_windows_mt_x64.lib">
+			<Filter>Source\Game\Chat\lib</Filter>
+		</None >
+		<Filter Include="Source\Game\Common">
+			<UniqueIdentifier>{4CDCA13B-0B5C-4FE2-B70B-FE3BC15650DC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\Game\Common\inc">
+			<UniqueIdentifier>{EFC483CE-05B4-4DF1-BDED-91D731F911CE}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Common\inc\ANSIString.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Base.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\BaseCharString.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\BaseListener.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Common.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\CustomType.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\CustomTypeBase.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\CustomTypeFactory.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\defines.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\DeSerializer.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Dictionary.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\DictionaryBase.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\EGTime.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Hashtable.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\JString.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\JVector.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\KeyObject.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Logger.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Object.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\platformLayer.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\platform_definition.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\porting.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Serializer.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\ToString.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\UTF8String.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\ValueObject.h">
+			<Filter>Source\Game\Common\inc</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Common\inc\Enums">
+			<UniqueIdentifier>{95CC475E-CFA8-49CE-94AE-676D235228A3}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Common\inc\Enums\DebugLevel.h">
+			<Filter>Source\Game\Common\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Enums\TypeCode.h">
+			<Filter>Source\Game\Common\inc\Enums</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Common\inc\Helpers">
+			<UniqueIdentifier>{5772DDF1-60BB-484B-8728-75DB4B1FE71D}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ArrayLengthType.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\CompileTimeAssertTrue.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ConfirmAllowed.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ConfirmAllowedKey.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\CustomTypeCallbackWrapper.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\Data.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\debug_assert.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\DeSerializerImplementation.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EnableIf.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EndianCorrectCast.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\EndianCorrectCastImplementation.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\IsDerivedFrom.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\IsPrimitiveType.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\KeyToObject.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\MathHelper.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ObjectToStringConverter.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\PrimitiveToStringConverter.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\RemoveConst.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\RemovePointer.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\SerializerImplementation.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\Thread.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ToStringImplementation.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\TypeName.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\Helpers\ValueToObject.h">
+			<Filter>Source\Game\Common\inc\Helpers</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Common\inc\MemoryManagement">
+			<UniqueIdentifier>{7CB7DA4D-ADF7-47BE-9EB5-90CB35DCA369}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Allocate.h">
+			<Filter>Source\Game\Common\inc\MemoryManagement</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Common\inc\MemoryManagement\Internal">
+			<UniqueIdentifier>{FEED0CD7-36E7-49BF-B25E-4F491ED8ECA7}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\Entry.h">
+			<Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\Interface.h">
+			<Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\MemoryPool.h">
+			<Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\MemoryPoolManager.h">
+			<Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Common\inc\MemoryManagement\Internal\RawStorage.h">
+			<Filter>Source\Game\Common\inc\MemoryManagement\Internal</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Common\lib">
+			<UniqueIdentifier>{FD89208C-3B88-473C-B16E-F0407A022BE7}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_debug_windows_md_x64.lib">
+			<Filter>Source\Game\Common\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Common\lib\common-cpp_vc12_debug_windows_md_x64.pdb">
+			<Filter>Source\Game\Common\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_debug_windows_mt_x64.lib">
+			<Filter>Source\Game\Common\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Common\lib\common-cpp_vc12_debug_windows_mt_x64.pdb">
+			<Filter>Source\Game\Common\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_release_windows_md_x64.lib">
+			<Filter>Source\Game\Common\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Common\lib\Common-cpp_vc12_release_windows_mt_x64.lib">
+			<Filter>Source\Game\Common\lib</Filter>
+		</None >
+		<Filter Include="Source\Game\LoadBalancing">
+			<UniqueIdentifier>{C8CD311F-36F8-4EF4-A9D0-09194C062576}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\Game\LoadBalancing\inc">
+			<UniqueIdentifier>{3C8F9411-9427-48F3-BD53-2FDE2EB07376}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\AuthenticationValues.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Client.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\FriendInfo.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Listener.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\LobbyStatsRequest.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\LobbyStatsResponse.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\MutablePlayer.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\MutableRoom.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Peer.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Player.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Room.h">
+			<Filter>Source\Game\LoadBalancing\inc</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\LoadBalancing\inc\Enums">
+			<UniqueIdentifier>{7124CADA-9778-4838-B222-B88C943014BA}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\CustomAuthenticationType.h">
+			<Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\DisconnectCause.h">
+			<Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\ErrorCode.h">
+			<Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\LobbyType.h">
+			<Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\MatchmakingMode.h">
+			<Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\PeerStates.h">
+			<Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Enums\ServerType.h">
+			<Filter>Source\Game\LoadBalancing\inc\Enums</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\LoadBalancing\inc\Internal">
+			<UniqueIdentifier>{D34CD09C-DFE9-44EA-A2C4-DF5B1635634A}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\AuthenticationValuesSecretSetter.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\MutablePlayerFactory.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\MutableRoomFactory.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerFactory.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerMovementInformant.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerPropertiesCacher.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\PlayerPropertiesUpdateInformant.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\RoomFactory.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\RoomPropertiesCacher.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Utils.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\LoadBalancing\inc\Internal\Enums">
+			<UniqueIdentifier>{796FD7AF-9FD4-47C7-989B-E71C5B9842BF}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\EventCode.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\JoinType.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\OperationCode.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\ParameterCode.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal\Enums</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\LoadBalancing\inc\Internal\Enums\Properties">
+			<UniqueIdentifier>{3DD0F6F5-00EC-4D92-9D57-72A82A817820}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\Properties\Player.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal\Enums\Properties</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\LoadBalancing\inc\Internal\Enums\Properties\Room.h">
+			<Filter>Source\Game\LoadBalancing\inc\Internal\Enums\Properties</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\LoadBalancing\lib">
+			<UniqueIdentifier>{ECB102D0-2B3D-426D-A2AC-D55AD8F0A8BB}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_debug_windows_md_x64.lib">
+			<Filter>Source\Game\LoadBalancing\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\LoadBalancing\lib\loadbalancing-cpp_vc12_debug_windows_md_x64.pdb">
+			<Filter>Source\Game\LoadBalancing\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_debug_windows_mt_x64.lib">
+			<Filter>Source\Game\LoadBalancing\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\LoadBalancing\lib\loadbalancing-cpp_vc12_debug_windows_mt_x64.pdb">
+			<Filter>Source\Game\LoadBalancing\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_release_windows_md_x64.lib">
+			<Filter>Source\Game\LoadBalancing\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\LoadBalancing\lib\LoadBalancing-cpp_vc12_release_windows_mt_x64.lib">
+			<Filter>Source\Game\LoadBalancing\lib</Filter>
+		</None >
+		<Filter Include="Source\Game\Photon">
+			<UniqueIdentifier>{49980F8E-5F63-4A14-9A33-FDCB51CFB3CD}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\Game\Photon\inc">
+			<UniqueIdentifier>{63A6EAD5-29AA-4954-9A68-90B1DFAFF415}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Photon\inc\EventData.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\LitePeer.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\OperationRequest.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\OperationResponse.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\PhotonListener.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\PhotonPeer.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\TrafficStats.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\TrafficStatsGameLevel.h">
+			<Filter>Source\Game\Photon\inc</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Photon\inc\Enums">
+			<UniqueIdentifier>{B081E9A9-E661-420D-B73A-D6319C88298F}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ConnectionProtocol.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ErrorCode.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventCache.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventCode.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\EventKey.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\NetworkPort.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\OperationCode.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ParameterCode.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\PeerState.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\ReceiverGroup.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\Photon\inc\Enums\StatusCode.h">
+			<Filter>Source\Game\Photon\inc\Enums</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\Photon\lib">
+			<UniqueIdentifier>{C56FA1FF-FD71-44A4-BA83-4487F879BACE}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_debug_windows_md_x64.lib">
+			<Filter>Source\Game\Photon\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_md_x64.pdb">
+			<Filter>Source\Game\Photon\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_debug_windows_mt_x64.lib">
+			<Filter>Source\Game\Photon\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Photon\lib\photon-cpp_vc12_debug_windows_mt_x64.pdb">
+			<Filter>Source\Game\Photon\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_md_x64.lib">
+			<Filter>Source\Game\Photon\lib</Filter>
+		</None >
+		<None Include="..\..\Source\Game\Photon\lib\Photon-cpp_vc12_release_windows_mt_x64.lib">
+			<Filter>Source\Game\Photon\lib</Filter>
+		</None >
+		<Filter Include="Source\Game\WiiYourself">
+			<UniqueIdentifier>{2AD9917B-0D22-4CDB-871F-5D1A551D0CDD}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\Game\WiiYourself\inc">
+			<UniqueIdentifier>{C8C2E7D1-3A93-4B87-A618-68BBE484D8C2}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote.h">
+			<Filter>Source\Game\WiiYourself\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_common.h">
+			<Filter>Source\Game\WiiYourself\inc</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\Game\WiiYourself\inc\wiimote_state.h">
+			<Filter>Source\Game\WiiYourself\inc</Filter>
+		</ClInclude >
+		<Filter Include="Source\Game\WiiYourself\lib">
+			<UniqueIdentifier>{27BC7D3C-DC89-41F4-BA98-DA67861489E8}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Game\WiiYourself\lib\WiiYourself!_v2_0.lib">
+			<Filter>Source\Game\WiiYourself\lib</Filter>
+		</None >
+	</ItemGroup>
 </Project>
