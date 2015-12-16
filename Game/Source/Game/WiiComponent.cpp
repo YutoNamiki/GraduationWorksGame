@@ -9,6 +9,10 @@ float SpeedYaw = 0.0f;
 float SpeedPitch = 0.0f;
 float SpeedRoll = 0.0f;
 
+float NunchukAccelX = 0.0f;
+float NunchukAccelY = 0.0f;
+float NunchukAccelZ = 0.0f;
+
 // Sets default values for this component's properties
 UWiiComponent::UWiiComponent()
 {
@@ -64,6 +68,10 @@ void UWiiComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorC
 	motionPlusPitch = SpeedPitch;
 	motionPlusRoll = SpeedRoll;
 
+	nunchukAccelX = NunchukAccelX;
+	nunchukAccelY = NunchukAccelY;
+	nunchukAccelZ = NunchukAccelZ;
+
 	if (remote.Button.A())
 		bPushAbutton = true;
 	else
@@ -118,6 +126,16 @@ void UWiiComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorC
 		bPushTwoButton = true;
 	else
 		bPushTwoButton = false;
+
+	if (remote.Nunchuk.Z)
+		bPushNunchukButtonZ = true;
+	else
+		bPushNunchukButtonZ = false;
+
+	if (remote.Nunchuk.C)
+		bPushNunchukButtonC = true;
+	else
+		bPushNunchukButtonC = false;
 }
 
 void onStateChange(wiimote& remote, state_change_flags changed, const wiimote_state& new_state)
@@ -175,6 +193,13 @@ void onStateChange(wiimote& remote, state_change_flags changed, const wiimote_st
 			SpeedYaw = remote.MotionPlus.Speed.Yaw;
 			SpeedPitch = remote.MotionPlus.Speed.Pitch;
 			SpeedRoll = remote.MotionPlus.Speed.Roll;
+		}
+
+		if (changed & NUNCHUK_ACCEL_CHANGED)
+		{
+			NunchukAccelX = remote.Nunchuk.Acceleration.X;
+			NunchukAccelY = remote.Nunchuk.Acceleration.Y;
+			NunchukAccelZ = remote.Nunchuk.Acceleration.Z;
 		}
 	}
 }

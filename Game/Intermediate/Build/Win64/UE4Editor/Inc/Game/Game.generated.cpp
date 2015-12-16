@@ -12,7 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 	void UWiiComponent::StaticRegisterNativesUWiiComponent()
 	{
 	}
-	IMPLEMENT_CLASS(UWiiComponent, 1661209084);
+	IMPLEMENT_CLASS(UWiiComponent, 325149234);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_UActorComponent();
@@ -39,6 +39,13 @@ void EmptyLinkFunctionForGeneratedCodeGame() {}
 
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushNunchukButtonC, UWiiComponent, bool);
+				UProperty* NewProp_bPushNunchukButtonC = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushNunchukButtonC"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushNunchukButtonC, UWiiComponent), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushNunchukButtonC, UWiiComponent), sizeof(bool), true);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushNunchukButtonZ, UWiiComponent, bool);
+				UProperty* NewProp_bPushNunchukButtonZ = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushNunchukButtonZ"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushNunchukButtonZ, UWiiComponent), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushNunchukButtonZ, UWiiComponent), sizeof(bool), true);
+				UProperty* NewProp_nunchukAccelZ = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("nunchukAccelZ"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(nunchukAccelZ, UWiiComponent), 0x0000000000000005);
+				UProperty* NewProp_nunchukAccelY = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("nunchukAccelY"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(nunchukAccelY, UWiiComponent), 0x0000000000000005);
+				UProperty* NewProp_nunchukAccelX = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("nunchukAccelX"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(nunchukAccelX, UWiiComponent), 0x0000000000000005);
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushTwoButton, UWiiComponent, bool);
 				UProperty* NewProp_bPushTwoButton = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bPushTwoButton"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bPushTwoButton, UWiiComponent), 0x0000000000000005, CPP_BOOL_PROPERTY_BITMASK(bPushTwoButton, UWiiComponent), sizeof(bool), true);
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bPushOneButton, UWiiComponent, bool);
@@ -73,6 +80,16 @@ PRAGMA_POP
 				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("ComponentReplication"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("WiiComponent.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("WiiComponent.h"));
+				MetaData->SetValue(NewProp_bPushNunchukButtonC, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushNunchukButtonC, TEXT("ModuleRelativePath"), TEXT("WiiComponent.h"));
+				MetaData->SetValue(NewProp_bPushNunchukButtonZ, TEXT("Category"), TEXT("bool"));
+				MetaData->SetValue(NewProp_bPushNunchukButtonZ, TEXT("ModuleRelativePath"), TEXT("WiiComponent.h"));
+				MetaData->SetValue(NewProp_nunchukAccelZ, TEXT("Category"), TEXT("float"));
+				MetaData->SetValue(NewProp_nunchukAccelZ, TEXT("ModuleRelativePath"), TEXT("WiiComponent.h"));
+				MetaData->SetValue(NewProp_nunchukAccelY, TEXT("Category"), TEXT("float"));
+				MetaData->SetValue(NewProp_nunchukAccelY, TEXT("ModuleRelativePath"), TEXT("WiiComponent.h"));
+				MetaData->SetValue(NewProp_nunchukAccelX, TEXT("Category"), TEXT("float"));
+				MetaData->SetValue(NewProp_nunchukAccelX, TEXT("ModuleRelativePath"), TEXT("WiiComponent.h"));
 				MetaData->SetValue(NewProp_bPushTwoButton, TEXT("Category"), TEXT("bool"));
 				MetaData->SetValue(NewProp_bPushTwoButton, TEXT("ModuleRelativePath"), TEXT("WiiComponent.h"));
 				MetaData->SetValue(NewProp_bPushOneButton, TEXT("Category"), TEXT("bool"));
@@ -117,7 +134,7 @@ PRAGMA_POP
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/Game")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x353AE159;
+			Guid.A = 0xEB7DF748;
 			Guid.B = 0x48964CE2;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
