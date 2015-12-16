@@ -5,21 +5,6 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-#ifndef GAME_GameCharacter_generated_h
-	#include "GameCharacter.h"
-#endif
-#ifndef GAME_GameGameMode_generated_h
-	#include "GameGameMode.h"
-#endif
-#ifndef GAME_GameHUD_generated_h
-	#include "GameHUD.h"
-#endif
-#ifndef GAME_GameProjectile_generated_h
-	#include "GameProjectile.h"
-#endif
-#ifndef GAME_TestMyoPawn_generated_h
-	#include "TestMyoPawn.h"
-#endif
-#ifndef GAME_TestWiiActor_generated_h
-	#include "TestWiiActor.h"
+#ifndef GAME_WiiComponent_generated_h
+	#include "WiiComponent.h"
 #endif
