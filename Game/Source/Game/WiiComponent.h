@@ -54,8 +54,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
 		bool bPushTwoButton;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
+		float nunchukAccelX;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
+		float nunchukAccelY;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = float)
+		float nunchukAccelZ;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+		bool bPushNunchukButtonZ;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
+		bool bPushNunchukButtonC;
 private:
 	wiimote remote;
-	int tryCount = 0;
-	
+	int tryCount = 0;	
 };
