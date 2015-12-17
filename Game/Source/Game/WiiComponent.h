@@ -64,6 +64,7 @@ public:
 		bool bPushNunchukButtonZ;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = bool)
 		bool bPushNunchukButtonC;
+
 private:
 	wiimote remote;
 	int tryCount = 0;	

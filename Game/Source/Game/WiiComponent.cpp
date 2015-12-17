@@ -13,6 +13,9 @@ float NunchukAccelX = 0.0f;
 float NunchukAccelY = 0.0f;
 float NunchukAccelZ = 0.0f;
 
+bool NunchukZ = 0;
+bool NunchukC = 0;
+
 // Sets default values for this component's properties
 UWiiComponent::UWiiComponent()
 {
@@ -23,7 +26,7 @@ UWiiComponent::UWiiComponent()
 
 	// ...
 	remote.ChangedCallback = onStateChange;
-	remote.CallbackTriggerFlags = (state_change_flags)(CONNECTED | CHANGED_ALL);
+	remote.CallbackTriggerFlags = (state_change_flags)(CONNECTED | EXTENSION_CHANGED | MOTIONPLUS_CHANGED);
 }
 
 
@@ -31,7 +34,7 @@ UWiiComponent::UWiiComponent()
 void UWiiComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	// ...
 	
 }
@@ -64,13 +67,45 @@ void UWiiComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorC
 		return;
 	}
 
-	motionPlusYaw = SpeedYaw;
-	motionPlusPitch = SpeedPitch;
-	motionPlusRoll = SpeedRoll;
+	switch (remote.ExtensionType)
+	{
+		case wiimote_state::NONE:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("none"));
+		}
+		case wiimote_state::NUNCHUK:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("nunchuk"));
+			nunchukAccelX = NunchukAccelX;
+			nunchukAccelY = NunchukAccelY;
+			nunchukAccelZ = NunchukAccelZ;
+		}
+		case wiimote_state::MOTION_PLUS:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("motionplus"));
+			motionPlusYaw = SpeedYaw;
+			motionPlusPitch = SpeedPitch;
+			motionPlusRoll = SpeedRoll;
+		}
+	}
 
-	nunchukAccelX = NunchukAccelX;
-	nunchukAccelY = NunchukAccelY;
-	nunchukAccelZ = NunchukAccelZ;
+	if (remote.NunchukConnected())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("nunchuk connected"));
+	}
+
+	if (remote.MotionPlusConnected())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("motionplus connected"));
+		if (remote.MotionPlusEnabled())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("motionplus enable"));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("motionplus not enable"));
+		}
+	}
 
 	if (remote.Button.A())
 		bPushAbutton = true;
@@ -127,60 +162,89 @@ void UWiiComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorC
 	else
 		bPushTwoButton = false;
 
-	if (remote.Nunchuk.Z)
-		bPushNunchukButtonZ = true;
-	else
-		bPushNunchukButtonZ = false;
-
-	if (remote.Nunchuk.C)
-		bPushNunchukButtonC = true;
-	else
-		bPushNunchukButtonC = false;
+	bPushNunchukButtonZ = NunchukZ;
+	bPushNunchukButtonC = NunchukC;
 }
 
 void onStateChange(wiimote& remote, state_change_flags changed, const wiimote_state& new_state)
 {
-	// 接続されたら
+	// we use this callback to set report types etc. to respond to key events
+	//  (like the wiimote connecting or extensions (dis)connecting).
+
+	// NOTE: don't access the public state from the 'remote' object here, as it will
+	//		  be out-of-date (it's only updated via RefreshState() calls, and these
+	//		  are reserved for the main application so it can be sure the values
+	//		  stay consistent between calls).  Instead query 'new_state' only.
+
+	// the wiimote just connected
 	if (changed & CONNECTED)
 	{
+		// ask the wiimote to report everything (using the 'non-continous updates'
+		//  default mode - updates will be frequent anyway due to the acceleration/IR
+		//  values changing):
+
+		// note1: you don't need to set a report type for Balance Boards - the
+		//		   library does it automatically.
+
+		// note2: for wiimotes, the report mode that includes the extension data
+		//		   unfortunately only reports the 'BASIC' IR info (ie. no dot sizes),
+		//		   so let's choose the best mode based on the extension status:
 		if (new_state.ExtensionType != wiimote::BALANCE_BOARD)
 		{
 			if (new_state.bExtension)
-				remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR_EXT);	// no IR dots
+			{
+				UE_LOG(LogTemp, Warning, TEXT("all"));
+				remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR_EXT); // no IR dots
+			}
 			else
-				remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR);	// IR dots
+			{
+				UE_LOG(LogTemp, Warning, TEXT("not all"));
+				remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR);		//    IR dots
+			}
 		}
 	}
-
-	// モーションプラスの検出したら
+	// a MotionPlus was detected
 	if (changed & MOTIONPLUS_DETECTED)
 	{
-		remote.EnableMotionPlus();
+		// enable it if there isn't a normal extension plugged into it
+		// (MotionPlus devices don't report like normal extensions until
+		//  enabled - and then, other extensions attached to it will no longer be
+		//  reported (so disable the M+ when you want to access them again).
+		if (remote.ExtensionType == wiimote_state::NONE) {
+			bool res = remote.EnableMotionPlus();
+			_ASSERT(res);
+		}
 	}
-	// 拡張コネクタにモーションプラスが接続されてたら
+	// an extension is connected to the MotionPlus
 	else if (changed & MOTIONPLUS_EXTENSION_CONNECTED)
 	{
+		// We can't read it if the MotionPlus is currently enabled, so disable it:
 		if (remote.MotionPlusEnabled())
-			remote.EnableMotionPlus();
+			remote.DisableMotionPlus();
 	}
-	// モーションプラスが拡張コネクタから切断されたら
+	// an extension disconnected from the MotionPlus
 	else if (changed & MOTIONPLUS_EXTENSION_DISCONNECTED)
 	{
-		// 再びモーションプラスのデータを有効にする
+		// enable the MotionPlus data again:
 		if (remote.MotionPlusConnected())
 			remote.EnableMotionPlus();
 	}
-	// その他の拡張機器が接続されたら
+	// another extension was just connected:
 	else if (changed & EXTENSION_CONNECTED)
 	{
+		// switch to a report mode that includes the extension data (we will
+		//  loose the IR dot sizes)
+		// note: there is no need to set report types for a Balance Board.
 		if (!remote.IsBalanceBoard())
-			remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_EXT);
+			remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR_EXT);
 	}
-	// その他の拡張機器が切断されたら
+	// extension was just disconnected:
 	else if (changed & EXTENSION_DISCONNECTED)
 	{
+		// use a non-extension report mode (this gives us back the IR dot sizes)
 		remote.SetReportType(wiimote::IN_BUTTONS_ACCEL_IR);
 	}
+
 
 	// 何らかの変化が起こったら
 	if (changed & CHANGED_ALL)
@@ -190,16 +254,30 @@ void onStateChange(wiimote& remote, state_change_flags changed, const wiimote_st
 
 		// モーションプラスの状態変化が起こったら
 		if (changed & MOTIONPLUS_SPEED_CHANGED) {
+			UE_LOG(LogTemp, Warning, TEXT("motionplus accel"));
 			SpeedYaw = remote.MotionPlus.Speed.Yaw;
 			SpeedPitch = remote.MotionPlus.Speed.Pitch;
 			SpeedRoll = remote.MotionPlus.Speed.Roll;
 		}
 
+		if (changed & BUTTONS_CHANGED)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("wiiremote buttonaaaaaaaaaaaaaaaaaaaaaaaaa"));
+		}
+
 		if (changed & NUNCHUK_ACCEL_CHANGED)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("nunchuk accel"));
 			NunchukAccelX = remote.Nunchuk.Acceleration.X;
 			NunchukAccelY = remote.Nunchuk.Acceleration.Y;
 			NunchukAccelZ = remote.Nunchuk.Acceleration.Z;
+		}
+
+		if (changed & NUNCHUK_BUTTONS_CHANGED)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("nunchuk button"));
+			NunchukZ = remote.Nunchuk.Z;
+			NunchukC = remote.Nunchuk.C;
 		}
 	}
 }
